@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,16 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', function () {
     return view('admin.dashboard');
 });
-Route::get('/', function () {
-    return view('admin.login');
-});
+Route::get('/',[LoginController::class,'AdminLogin']);
+Route::get('/dashboard',[DashboardController::class,'dashboard']);
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified',
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+
