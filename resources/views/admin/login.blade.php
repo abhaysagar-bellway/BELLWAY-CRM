@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Admin Login</title>
+  <title>Bellway Infotech - CRM</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -31,6 +31,92 @@
 </head>
 
 <body>
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+<div>
+    <img src="assets/img/bellway-logo.png" alt="" class="logo">
+  </div>
+
+    <h1 class="logo-heading">Bellway Infotech</h1>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Login</h1>
+
+    </div><!-- End Page Title -->
+    
+    <div class="login-container">
+<div class="login-header">
+  <img src="assets/img/bellway-logo.png" alt="" class="logo-header">
+</div>
+ <div class="login-form">
+
+<form action="" method="">
+  <div class="form-group input-inline">
+    <label for=""><img src="assets/img/email-logo.png" alt="" class="form-icon"></label>
+    <input type="email" class="form-control input-box rectangle" name="" id="" aria-describedby="emailHelpId" placeholder="Email Address">
+   
+  </div>
+  <div class="form-group input-inline">
+    <label for=""><img src="assets/img/username-logo.png" alt="" class="form-icon"></label>
+    <input type="email" class="form-control input-box rectangle" name="" id="" aria-describedby="emailHelpId" placeholder="Username">
+    
+  </div>
+  <div class="form-group input-inline">
+    <label for=""><img src="assets/img/password-logo.png" alt="" class="form-icon"></label>
+    <input type="email" class="form-control input-box rectangle" name="" id="" aria-describedby="emailHelpId" placeholder="Password">
+  </div>
+  <div class="input-inline">
+  <input type="checkbox" id="rememberMe" name="" value="" class="checkbox">
+  <label for="rememberMe" class="checkbox"> Remember me</label><br>
+</div>
+<button type="submit" class="login-btn">Login</button>
+</form>
+</div>
+</div>
+
+
+    </div>
+
+     
+
+
+
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+ 
+          </div>
+        </div><!-- End Left side columns -->
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  {{-- <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer --> --}}
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
