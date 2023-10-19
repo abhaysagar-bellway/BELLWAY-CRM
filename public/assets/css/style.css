@@ -219,6 +219,7 @@ h6 {
 /* Card */
 .card {
   margin-bottom: 30px;
+  top: 130px;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
@@ -607,7 +608,6 @@ flex-shrink: 0;
   position: fixed;
   top: 0px;
   left: 0;
-  bottom: 0;
   width: 300px;
   z-index: 996;
   transition: all 0.3s;
