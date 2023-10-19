@@ -1311,7 +1311,7 @@ flex-shrink: 0;
 }
 .input-inline{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   margin: 10px;
 }
 .checkbox{
@@ -1330,3 +1330,4 @@ box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
 color: white;
 margin-left: 10px;
 }
+
