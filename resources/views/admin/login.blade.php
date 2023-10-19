@@ -30,7 +30,28 @@
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-
+ <div class="container">
+  <div class="right-box">
+    hello I am box
+  </div>
+  <form >
+    <div class="mb-3 col-md-4">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+    </div>
+    <div class="mb-3 col-md-4">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+ </div>
+   
 <body>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
