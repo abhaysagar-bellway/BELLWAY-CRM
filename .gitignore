@@ -5,6 +5,7 @@
 /public/storage
 /storage/*.key
 /vendor
+/resources/view/admin/data.blade.php
 .env
 .env.backup
 .env.production

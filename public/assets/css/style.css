@@ -42,7 +42,7 @@ h6 {
 # Main
 --------------------------------------------------------------*/
 #main {
-  margin-top: 60px;
+  margin-top: 40px;
   padding: 20px 30px;
   transition: all 0.3s;
 }
@@ -57,11 +57,11 @@ h6 {
 # Page Title
 --------------------------------------------------------------*/
 .pagetitle {
-  margin-bottom: 10px;
+margin-left: 20px;
 }
 
 .pagetitle h1 {
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 0;
   font-weight: 600;
   color: #ffffff;
@@ -223,6 +223,7 @@ h6 {
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  background-color: #1B2137;
 }
 
 .card-header,
@@ -347,7 +348,7 @@ h6 {
 }
 
 .nav-tabs-bordered .nav-link.active {
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #4154f1;
   border-bottom: 2px solid #4154f1;
 }
@@ -388,8 +389,8 @@ flex-shrink: 0;
   z-index: 997;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
-  padding-left: 20px;
+  background-color: #E8F5FC;
+  /* padding-left: 20px; */
   /* Toggle Sidebar Button */
   /* Search Bar */
 }
@@ -414,7 +415,7 @@ flex-shrink: 0;
     right: 0;
     padding: 20px;
     box-shadow: 0px 0px 15px 0px rgba(1, 41, 112, 0.1);
-    background: white;
+    background: #E8F5FC;
     z-index: 9999;
     transition: 0.3s;
     visibility: hidden;
@@ -475,9 +476,14 @@ flex-shrink: 0;
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #012970;
+  color: #ffffff;
+  text-align: center;
   margin-right: 25px;
   position: relative;
+  background-color: #1B2137;
+  border-radius: 16px;
+  height: 30px;
+  width: 30px;
 }
 
 .header-nav .nav-profile {
@@ -608,12 +614,11 @@ flex-shrink: 0;
   position: fixed;
   top: 0px;
   left: 0;
+  bottom: 0;
   width: 300px;
   z-index: 996;
   transition: all 0.3s;
   padding-top: 20px;
-  padding-left: 80px;
-  padding-right: 80px;
   margin: 20px;
   /* overflow-y: auto; */
   scrollbar-width: thin;
@@ -698,9 +703,8 @@ flex-shrink: 0;
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: #4154f1;
+  color: #ffffff;
   transition: 0.3;
-  background: #f6f9ff;
   padding: 10px 15px;
   border-radius: 4px;
 }
@@ -712,8 +716,8 @@ flex-shrink: 0;
 }
 
 .sidebar-nav .nav-link.collapsed {
-  color: #012970;
-  background: #fff;
+  color: #ffffff;
+  /* background: #fff; */
 }
 
 .sidebar-nav .nav-link.collapsed i {
@@ -1268,6 +1272,10 @@ flex-shrink: 0;
 .logo-heading{
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+
+
   
 }
 .login-form{
@@ -1283,7 +1291,7 @@ flex-shrink: 0;
   border-radius: 0%;
   border-color: #00000040;
   background-image: linear-gradient(180deg, #3E4768, #1B2137);
-  color: white;
+  color: #ffffff !important;
   box-shadow: 10px 10px 20px #00000040;
 }
 
@@ -1329,4 +1337,30 @@ background: linear-gradient(180deg, #2C9223 0%, rgba(186, 201, 255, 0.00) 117.5%
 box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
 color: white;
 margin-left: 10px;
+}
+.sidebar-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+input::placeholder{
+  color: #ffffff !important;
+}
+.login-page-image{
+margin-left: 150px;
+}
+.login-page-img{
+  width: 250px;
+  height: 250px;
+
+}
+.top-fixed {
+  position: fixed;
+  right: 0;
+}
+#dashboard{
+  background-color: #E8F5FC;;
+}
+.dashboard-color{
+  background-color: #1B2137 !important;
 }
