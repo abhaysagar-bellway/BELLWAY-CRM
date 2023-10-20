@@ -32,14 +32,20 @@
 
 <body>
 
+
+  
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
-<div>
+<div class="sidebar-logo">
     <img src="assets/img/bellway-logo.png" alt="" class="logo">
   </div>
 
     <h1 class="logo-heading">Bellway Infotech</h1>
+
+    <div class="login-page-image">
+      <img src="assets/img/login-page-img.png" alt="" class="login-page-img">
+    </div>
 
   </aside><!-- End Sidebar-->
 
@@ -103,6 +109,7 @@
 
   </main><!-- End #main -->
 
+
   {{-- <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
@@ -131,6 +138,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
 
 </body>
 
