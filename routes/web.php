@@ -18,4 +18,3 @@ Route::get('/',[LoginController::class,'AdminLogin']);
 Route::post('/login',[LoginController::class,'login'])->name('admin.submit');
 Route::get('/dashboard',[DashboardController::class,'dashboard']);
 
-

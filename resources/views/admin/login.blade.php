@@ -34,16 +34,23 @@
 
 <body>
 
-    <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
 
-        <div>
-            <img src="assets/img/bellway-logo.png" alt="" class="logo">
-        </div>
+  
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+<div class="sidebar-logo">
+    <img src="assets/img/bellway-logo.png" alt="" class="logo">
+  </div>
+
 
         <h1 class="logo-heading">Bellway Infotech</h1>
 
-    </aside><!-- End Sidebar-->
+    <div class="login-page-image">
+      <img src="assets/img/login-page-img.png" alt="" class="login-page-img">
+    </div>
+
+  </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
 
@@ -161,6 +168,7 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
 
 </body>
 
