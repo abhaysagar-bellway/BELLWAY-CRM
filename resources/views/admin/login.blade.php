@@ -56,21 +56,33 @@
 
         <div class="pagetitle">
             <h1>Login</h1>
-
+    
         </div><!-- End Page Title -->
 
         <div class="login-container">
             <div class="login-header">
                 <img src="assets/img/bellway-logo.png" alt="" class="logo-header">
             </div>
+            @if (session('error'))
+                <span class="text-danger text-center">{{session('error')}}</span>
+            @endif
             <div class="login-form">
                 <form action="{{route('admin.submit')}}" method="POST">
                     @csrf
                   <div class="form-group input-inline">
                         <label for="email"><img src="assets/img/email-logo.png" alt=""
                                 class="form-icon"></label>
+
+                         @php
+                              if(isset($cookieData['email']) && !empty($cookieData['email'])){
+                                 $email = $cookieData['email'];
+                              } else {
+                                 $email = old('email');
+                              }
+                             
+                         @endphp       
                         <input type="email" class="form-control input-box rectangle" name="email" id=""
-                            aria-describedby="emailHelpId" placeholder="Email Address" value="{{old('email')}}">
+                            aria-describedby="emailHelpId" placeholder="Email Address" value="{{$email}}">
 
                   </div>     
                        <div class="input-inline">
@@ -82,10 +94,19 @@
                           </div>
                     
                     <div class="form-group input-inline">
-                        <label for="text"><img src="assets/img/username-logo.png" alt=""
+                        <label for="name"><img src="assets/img/username-logo.png" alt=""
                                 class="form-icon"></label>
+                                @php
+                              if(isset($cookieData['name']) && !empty($cookieData['name'])){
+                                 $name = $cookieData['name'];
+                              } else {
+                                 $name = old('name');
+                              }
+                             
+                         @endphp 
                         <input type="name" class="form-control input-box rectangle" name="name" id=""
-                            aria-describedby="emailHelpId" placeholder="Username" value="{{old('name')}}">
+                            aria-describedby="emailHelpId" placeholder="Username" 
+                           value="{{$name}}" >
                     </div>
                     <div class="input-inline">
                         <span class="text-danger">
@@ -96,8 +117,17 @@
                     <div class="form-group input-inline">
                         <label for="password"><img src="assets/img/password-logo.png" alt=""
                                 class="form-icon"></label>
+
+                                @php
+                              if(isset($cookieData['password']) && !empty($cookieData['password'])){
+                                 $password = $cookieData['password'];
+                              } else {
+                                 $password = old('password');
+                              }
+                             
+                         @endphp 
                         <input type="password" class="form-control input-box rectangle" name="password" id=""
-                            aria-describedby="emailHelpId" placeholder="Password" value="{{old('password')}}">
+                            aria-describedby="" placeholder="Password" value="{{$password}}" >
                        </div> 
                        <div class="input-inline">
                         <span class="text-danger"> 
@@ -105,10 +135,18 @@
                                 {{ $message }}
                             @enderror </span>
                     </div>
-
+ 
                     
                     <div class="input-inline">
-                        <input type="checkbox" id="rememberMe" name="checkbox" value="" class="checkbox">
+                        @php
+                        if(isset($cookieData['remember_me']) && !empty($cookieData['remember_me'])){
+                           $checked =  "checked";
+                        } else {
+                           $checked = '';
+                        }
+                       
+                   @endphp 
+                        <input type="checkbox" id="rememberMe" name="checkbox" value="" class="checkbox" <?=$checked?>>
                         <label for="rememberMe" class="checkbox"> Remember me</label><br>
                     </div>
                     <button type="submit" class="login-btn">Login</button>
@@ -118,13 +156,7 @@
 
 
         </div>
-
-
-
-
-
-
-        <section class="section dashboard">
+     <section class="section dashboard">
             <div class="row">
 
                 <!-- Left side columns -->
@@ -137,21 +169,8 @@
             </div>
         </section>
 
-    </main><!-- End #main -->
+    </main>
 
-    {{-- <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer --> --}}
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
