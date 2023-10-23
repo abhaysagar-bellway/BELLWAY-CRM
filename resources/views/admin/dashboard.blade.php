@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard-Bellway Infotech-CRM </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -56,54 +56,54 @@
   <ul class="sidebar-nav" id="sidebar-nav">
 
     <li class="nav-item">
-      <a class="nav-link " href="index.html">
+      <a class="nav-link" href="{{url('/')}}/dashboard">
         <i class="bi bi-grid"></i>
         <span>Dashboard</span>
       </a>
     </li><!-- End Dashboard Nav -->
 
     <li class="nav-item">
-      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+      <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="">
         <i class="bi bi-menu-button-wide"></i><span>Enquiry</span><i class="bi bi-chevron-down ms-auto"></i>
       </a>
       <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-          <a href="components-alerts.html">
+          <a href="{{url('/')}}/Searchinquiry">
             <i class="bi bi-circle"></i><span>Search Enquiry</span>
           </a>
         </li>
         <li>
-          <a href="components-accordion.html">
+          <a href="{{url('/')}}/Addinquiry">
             <i class="bi bi-circle"></i><span>Add Enquiry</span>
           </a>
         </li>
         <li>
-          <a href="components-badges.html">
+          <a href="{{url('/')}}/Newinquiry">
             <i class="bi bi-circle"></i><span>New Enquiry</span>
           </a>
         </li>
         <li>
-          <a href="components-breadcrumbs.html">
+          <a href="{{url('/')}}/ClientDetail">
             <i class="bi bi-circle"></i><span>Client Details</span>
           </a>
         </li>
         <li>
-          <a href="components-buttons.html">
+          <a href="{{url('/')}}/proposaldetails">
             <i class="bi bi-circle"></i><span>Purposal Details</span>
           </a>
         </li>
         <li>
-          <a href="components-cards.html">
+          <a href="{{url('/')}}/pendingFollowup">
             <i class="bi bi-circle"></i><span>Pending Follow up</span>
           </a>
         </li>
         <li>
-          <a href="components-carousel.html">
+          <a href="{{url('/')}}/doneFollowup">
             <i class="bi bi-circle"></i><span>Done Follow up</span>
           </a>
         </li>
         <li>
-          <a href="components-list-group.html">
+          <a href="{{url('/')}}/lead">
             <i class="bi bi-circle"></i><span>Allocated Leads to me</span>
           </a>
         </li>
@@ -114,7 +114,7 @@
    
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="users-profile.html">
+      <a class="nav-link collapsed" href="{{url('/')}}/chat">
         <i class="bi bi-chat"></i>
         <span>Chat</span>
       </a>
@@ -122,7 +122,7 @@
 
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="pages-login.html">
+      <a class="nav-link collapsed" href="{{url('/')}}">
         <i class="bi bi-box-arrow-in-right"></i>
         <span>Logout</span>
       </a>
@@ -136,16 +136,7 @@
 <div class="col-9">
   <div class="row">
     <div class="col-sm-12">
-      <header id="header" class="header top-fixed d-flex align-items-center">
-
-        {{-- <div class="d-flex align-items-center justify-content-between">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">NiceAdmin</span>
-          </a>
-          <i class="bi bi-list toggle-sidebar-btn"></i>
-        </div><!-- End Logo --> --}}
-    
+      <header id="header" class="header top-fixed d-flex align-items-center">  
         <div class="search-bar">
           <form class="search-form d-flex align-items-center" method="POST" action="">
             

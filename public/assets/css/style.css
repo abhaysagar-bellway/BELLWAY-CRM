@@ -1319,7 +1319,7 @@ flex-shrink: 0;
 }
 .input-inline{
   display: flex;
-  flex-direction: row;
+  flex-direction:row;
   margin: 10px;
 }
 .checkbox{
