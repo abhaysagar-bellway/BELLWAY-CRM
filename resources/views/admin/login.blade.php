@@ -67,7 +67,7 @@
                 <span class="text-danger text-center">{{session('error')}}</span>
             @endif
             <div class="login-form">
-                <form action="{{route('admin.submit')}}" method="POST">
+                <form action="{{url('/')}}/login" method="POST">
                     @csrf
                   <div class="form-group input-inline">
                         <label for="email"><img src="assets/img/email-logo.png" alt=""

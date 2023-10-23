@@ -11,6 +11,7 @@ use App\Http\Controllers\FollowupController;
 use App\Http\Controllers\ClientDetailController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ChatController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,4 +38,4 @@ Route::get('/chat',[ChatController::class,'chat']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
