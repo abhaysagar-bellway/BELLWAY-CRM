@@ -112,6 +112,8 @@ margin-left: 20px;
   animation-fill-mode: both;
   border: 0;
   box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
+
+  
 }
 
 .dropdown-menu .dropdown-header,
@@ -219,7 +221,7 @@ margin-left: 20px;
 /* Card */
 .card {
   margin-bottom: 30px;
-  top: 130px;
+  top: 80px;
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
@@ -238,7 +240,7 @@ margin-left: 20px;
   padding: 20px 0 15px 0;
   font-size: 18px;
   font-weight: 500;
-  color: #012970;
+  color: #3DFFC1;
   font-family: "Poppins", sans-serif;
 }
 
@@ -753,7 +755,7 @@ flex-shrink: 0;
   align-items: center;
   font-size: 14px;
   font-weight: 600;
-  color: #012970;
+  color: #ffffff;
   transition: 0.3;
   padding: 10px 0 10px 40px;
   transition: 0.3s;
@@ -768,11 +770,11 @@ flex-shrink: 0;
 
 .sidebar-nav .nav-content a:hover,
 .sidebar-nav .nav-content a.active {
-  color: #4154f1;
+  color: #ffffff;
 }
 
 .sidebar-nav .nav-content a.active i {
-  background-color: #4154f1;
+  background-color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -1363,4 +1365,21 @@ margin-left: 150px;
 }
 .dashboard-color{
   background-color: #1B2137 !important;
+}
+.dropdown-scroll{
+  max-height:150px;
+   overflow: auto;
+
+}
+#addTodoForm {
+  display: none;
+}
+.todo-list{
+  color: #FFF;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
 }

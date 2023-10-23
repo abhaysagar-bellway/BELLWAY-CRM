@@ -36,6 +36,9 @@ Route::get('/lead',[LeadController::class,'lead']);
 Route::get('/chat',[ChatController::class,'chat']);
 
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+
+Route::post('/todo', [DashboardController::class, 'addTodo']);
