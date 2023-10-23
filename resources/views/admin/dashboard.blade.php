@@ -114,7 +114,7 @@
    
 
     <li class="nav-item">
-      <a class="nav-link collapsed" href="users-profile.html">
+      <a class="nav-link collapsed" href="{{url('/')}}/chat">
         <i class="bi bi-chat"></i>
         <span>Chat</span>
       </a>

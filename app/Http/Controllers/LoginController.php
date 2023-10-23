@@ -57,9 +57,7 @@ class LoginController extends Controller
                return redirect()->back()->with('error','Invalid Login details');
             }
              return redirect("/")->withSuccess('Login details are not valid');
-            
-  
-           
+    
     }
 
 

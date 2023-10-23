@@ -10,6 +10,7 @@ use App\Http\Controllers\ProposalDetailsController;
 use App\Http\Controllers\FollowupController;
 use App\Http\Controllers\ClientDetailController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\ChatController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,4 +32,9 @@ Route::get('/proposaldetails',[ProposalDetailsController::class,'proposaldetails
 Route::get('/pendingFollowup',[FollowupController::class, 'pendingFollowup']);
 Route::get('/doneFollowup',[FollowupController::class, 'doneFollowup']);
 Route::get('/lead',[LeadController::class,'lead']);
+Route::get('/chat',[ChatController::class,'chat']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
