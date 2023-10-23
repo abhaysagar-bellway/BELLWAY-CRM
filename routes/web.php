@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\BarchartController;
+use App\Models\Todo;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,4 @@ Route::get('/admin', function () {
 Route::get('/',[LoginController::class,'AdminLogin']);
 Route::get('/dashboard',[DashboardController::class,'dashboard']);
 
+Route::post('/todo', [DashboardController::class, 'addTodo']);
