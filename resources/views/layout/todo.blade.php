@@ -1,8 +1,10 @@
-<section class="section dashboard">
+
+<div class="col-12">
+  <section class="section dashboard">
 
 
     <!-- todo -->
-    <div class="card">
+    <div class="card" style="width: 300px">
       <div class="filter">
         <button type="button" class="btn icon" style="background-color: #1B2137" data-toggle="modal" data-target="#exampleModal">
             <i class="bi bi-plus-square"></i> Add New
@@ -14,7 +16,7 @@
       <div class="card-body pb-0">
         <h5 class="card-title">To do</h5>
 
-        <div id="" style="min-height: 200px;" class="echart">
+        <div id="" style="min-height: 250px;" class="echart">
           <ul class="todo-list"> 
             @foreach ($todo as $todos) 
                 <li>{{ $todos->todo }}</li> 
@@ -40,7 +42,7 @@
           <form action="{{url('/todo')}}" method="post">
             @csrf
             <div class="form-group">
-                <input type="text" class="form-control" name="todo" id="todo" aria-describedby="emailHelp" placeholder="Enter email">
+                <input type="text" class="form-control" name="todo" id="todo" aria-describedby="emailHelp" placeholder="Enter your todo">
 
               </div>
         
@@ -63,3 +65,4 @@ $('#myModal').modal('toggle')
 </script>
 </section>
 
+</div>

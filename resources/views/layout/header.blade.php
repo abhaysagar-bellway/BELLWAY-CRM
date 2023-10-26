@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -49,6 +49,10 @@
   {{-- barchar js --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.1/echarts.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+{{-- chart --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body id="dashboard">

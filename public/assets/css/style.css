@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", "Open Sans", sans-serif;
   background: #1B2137;
   color: #444444;
 }
@@ -42,8 +42,8 @@ h6 {
 # Main
 --------------------------------------------------------------*/
 #main {
-  margin-top: 40px;
-  padding: 20px 30px;
+  margin-top: 20px;
+  padding: 10px 0px;
   transition: all 0.3s;
 }
 
@@ -220,10 +220,10 @@ margin-left: 20px;
 
 /* Card */
 .card {
-  margin-bottom: 30px;
-  top: 80px;
+  margin-bottom: 10px;
+  top: 60px;
   border: none;
-  border-radius: 5px;
+  border-radius: 16px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
   background-color: #1B2137;
 }
@@ -237,17 +237,18 @@ margin-left: 20px;
 }
 
 .card-title {
-  padding: 20px 0 15px 0;
-  font-size: 18px;
+  padding: 10px 0 0 0;
+  font-size: 12px;
   font-weight: 500;
   color: #3DFFC1;
   font-family: "Poppins", sans-serif;
 }
 
-.card-title span {
-  color: #899bbd;
-  font-size: 14px;
+.card-heading {
+  color: #ffffff;
+  font-size: 12px;
   font-weight: 400;
+ padding-bottom: 10px;
 }
 
 .card-body {
@@ -360,8 +361,7 @@ margin-left: 20px;
 --------------------------------------------------------------*/
 .logo {
   /* line-height: 1; */
-  width: 120px;
-height: 120px;
+  width: 60px;
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -370,7 +370,7 @@ flex-shrink: 0;
 
 @media (min-width: 1200px) {
   .logo {
-    width: 120px;
+    width: 60px;
   }
 }
 
@@ -477,7 +477,7 @@ flex-shrink: 0;
 }
 
 .header-nav .nav-icon {
-  font-size: 22px;
+  font-size: 18px;
   color: #ffffff;
   text-align: center;
   margin-right: 25px;
@@ -486,6 +486,8 @@ flex-shrink: 0;
   border-radius: 16px;
   height: 30px;
   width: 30px;
+  padding-top: 3px;
+
 }
 
 .header-nav .nav-profile {
@@ -503,10 +505,13 @@ flex-shrink: 0;
 
 .header-nav .badge-number {
   position: absolute;
-  inset: -2px -5px auto auto;
+  inset: -28px -22px auto auto;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 50px;
   padding: 3px 6px;
+  border-radius: 16px;
+  color: #08D110;
+
 }
 
 .header-nav .notifications {
@@ -617,7 +622,7 @@ flex-shrink: 0;
   top: 0px;
   left: 0;
   bottom: 0;
-  width: 300px;
+  width: 250px;
   z-index: 996;
   transition: all 0.3s;
   padding-top: 20px;
@@ -704,10 +709,10 @@ flex-shrink: 0;
   display: flex;
   align-items: center;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
   transition: 0.3;
-  padding: 10px 15px;
+  padding: 5px 15px;
   border-radius: 4px;
 }
 
@@ -754,7 +759,7 @@ flex-shrink: 0;
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
   transition: 0.3;
   padding: 10px 0 10px 40px;
@@ -792,7 +797,7 @@ flex-shrink: 0;
   padding-right: 20px;
   padding-bottom: 5px;
   transition: 0.3s;
-  font-size: 16px;
+
 }
 
 .dashboard .filter .icon:hover,
@@ -1272,7 +1277,7 @@ height: 41.379px;
 flex-shrink: 0;
 }
 .logo-heading{
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
@@ -1349,7 +1354,8 @@ input::placeholder{
   color: #ffffff !important;
 }
 .login-page-image{
-margin-left: 150px;
+margin-left: 100px;
+margin-top: 50px;
 }
 .login-page-img{
   width: 250px;
@@ -1358,7 +1364,8 @@ margin-left: 150px;
 }
 .top-fixed {
   position: fixed;
-  right: 0;
+  right: 25px;
+
 }
 #dashboard{
   background-color: #E8F5FC;;
@@ -1382,4 +1389,35 @@ margin-left: 150px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
+}
+.line-chart-padding{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.header-nav .online-icon {
+  position: absolute;
+  inset: -31px -21px auto auto;
+  font-weight: normal;
+  font-size: 60px;
+  padding: 3px 6px;
+  border-radius: 16px;
+  color: #08D110;
+
+}
+.header-nav .online-dropdown-icon {
+  position: absolute;
+  inset: 5px -25px auto auto;
+  font-weight: normal;
+  padding: 3px 6px;
+  border-radius: 16px;
+  color: #1B2137;
+  font-size: 12px;
+
+}
+.calender{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 }

@@ -33,7 +33,7 @@ Route::get('/proposaldetails',[ProposalDetailsController::class,'proposaldetails
 Route::get('/pendingFollowup',[FollowupController::class, 'pendingFollowup']);
 Route::get('/doneFollowup',[FollowupController::class, 'doneFollowup']);
 Route::get('/lead',[LeadController::class,'lead']);
-Route::get('/chat',[ChatController::class,'chat']);
+Route::get('/chat',[ChatController::class,'chat'])->name('çhat');
 
 
 //Auth::routes();
