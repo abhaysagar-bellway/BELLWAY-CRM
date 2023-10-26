@@ -57,7 +57,7 @@ h6 {
 # Page Title
 --------------------------------------------------------------*/
 .pagetitle {
-margin-left: 20px;
+  margin-left: 20px;
 }
 
 .pagetitle h1 {
@@ -113,7 +113,7 @@ margin-left: 20px;
   border: 0;
   box-shadow: 0 5px 30px 0 rgba(82, 63, 105, 0.2);
 
-  
+
 }
 
 .dropdown-menu .dropdown-header,
@@ -684,7 +684,7 @@ flex-shrink: 0;
   padding: 0;
   margin: 0;
   list-style: none;
- 
+
 }
 
 .sidebar-nav li {
@@ -736,8 +736,14 @@ flex-shrink: 0;
   background: #f6f9ff;
 }
 
+
 .sidebar-nav .nav-link:hover i {
   color: #4154f1;
+}
+
+.sidebar-nav .nav-link:hover span {
+  color: #4154f1;
+  background: #f6f9ff;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -1257,7 +1263,7 @@ flex-shrink: 0;
   color: #012970;
 }
 
-.login-container{
+.login-container {
   background-image: linear-gradient(330deg, #511B4E, #1B2137);
   margin: 20px;
   background-size: cover;
@@ -1266,32 +1272,37 @@ flex-shrink: 0;
   justify-content: center;
 
 }
-.login-header{
+
+.login-header {
   background-color: #E8F5FC;
   padding: 10px;
-  border-radius: 8px;
+  display: flex;
+  border-radius: 15px 15px 2px 2px;
 }
-.logo-header{
+
+.logo-header {
   width: 38.057px;
-height: 41.379px;
-flex-shrink: 0;
+  height: 41.379px;
+  flex-shrink: 0;
 }
 .logo-heading{
   font-size: 20px;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+  color: #3DFFC1;
 
 
-  
 }
-.login-form{
+
+.login-form {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 50px;
 }
+
 .input-box {
   height: 40px;
   width: 300px;
@@ -1303,7 +1314,7 @@ flex-shrink: 0;
 }
 
 .input-box .rectangle {
-  
+
 
   height: 40px;
   left: 0;
@@ -1312,76 +1323,90 @@ flex-shrink: 0;
   width: 300px;
   color: white;
 }
-.form-icon{
+
+.form-icon {
   background-color: White;
   height: 40px;
   width: 40px;
   padding: 10px;
 }
-.login-form{
+
+.login-form {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.input-inline{
+
+.input-inline {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   margin: 10px;
 }
-.checkbox{
+
+.checkbox {
   background-color: transparent;
   border-color: black;
   color: white;
   padding-left: 5px;
 }
-.login-btn{
+
+.login-btn {
   width: 300px;
-height: 40px;
-flex-shrink: 0;
-border-radius: 10px;
-background: linear-gradient(180deg, #2C9223 0%, rgba(186, 201, 255, 0.00) 117.5%);
-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
-color: white;
-margin-left: 10px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #2C9223 0%, rgba(186, 201, 255, 0.00) 117.5%);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  color: white;
+  margin-left: 10px;
 }
-.sidebar-logo{
+
+.sidebar-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-input::placeholder{
+
+input::placeholder {
   color: #ffffff !important;
 }
 .login-page-image{
 margin-left: 100px;
 margin-top: 50px;
 }
-.login-page-img{
+
+.login-page-img {
   width: 250px;
   height: 250px;
 
 }
+
 .top-fixed {
   position: fixed;
   right: 25px;
 
 }
-#dashboard{
-  background-color: #E8F5FC;;
+
+.dashboard {
+  background-color: #E8F5FC;
 }
-.dashboard-color{
+
+.dashboard-color {
   background-color: #1B2137 !important;
 }
-.dropdown-scroll{
-  max-height:150px;
-   overflow: auto;
+
+.dropdown-scroll {
+  max-height: 150px;
+  overflow: auto;
 
 }
+
 #addTodoForm {
   display: none;
 }
-.todo-list{
+
+.todo-list {
   color: #FFF;
 
   font-family: Inter;
