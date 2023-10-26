@@ -1,67 +1,79 @@
  
-    <div class="col-3">
+    <div class="col-3 ">
 
         <!-- ======= Sidebar ======= -->
-         <aside id="sidebar" class="sidebar dashboard-color">
+        @php
+            $dashboardColorClass = 'dashboard-color';
+            $navlink = 'nav-link';
+            $navLinkColor = '';
+         @endphp
+       @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser'))
+          @php
+            $dashboardColorClass = '';
+            $navLinkColor = '#444444';
+          @endphp
+        @endif
+          
+         <aside id="sidebar" class="sidebar {{ $dashboardColorClass }}">
        
          <div class="sidebar-logo">
            <img src="assets/img/bellway-logo.png" alt="" class="logo">
          </div>
        
-           <h1 class="logo-heading" style="color:  #3DFFC1">Bellway Infotech</h1>
+           <h1 class="logo-heading" style="color:#3DFFC1;">Bellway Infotech</h1>
        
          <ul class="sidebar-nav" id="sidebar-nav">
-       
+          
            <li class="nav-item">
-             <a class="nav-link " href="index.html">
+             <a class="{{$navlink}}" href="{{url('/')}}/dashboard" style="color: {{$navLinkColor}}">
                <i class="bi bi-grid"></i>
                <span>Dashboard</span>
              </a>
            </li><!-- End Dashboard Nav -->
        
            <li class="nav-item">
-             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+             <a class="{{$navlink}} collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="" style="color: {{$navLinkColor}}">
                <i class="bi bi-menu-button-wide"></i><span>Enquiry</span><i class="bi bi-chevron-down ms-auto"></i>
              </a>
              <ul id="components-nav" class="nav-content collapse dropdown-scroll" data-bs-parent="#sidebar-nav">
                <li>
-                 <a href="components-alerts.html">
-                   <i class="bi bi-circle"></i><span>Search Enquiry</span>
+                 <a href="{{url('/')}}/search-inquiry" class=" {{$navlink}}"style="color:{{$navLinkColor}}">
+                   <i class="bi bi-circle" ></i><span>Search Enquiry</span>
                  </a>
                </li>
                <li>
-                 <a href="components-accordion.html">
-                   <i class="bi bi-circle"></i><span>Add Enquiry</span>
+                 <a href="{{url('/')}}/Addinquiry" class="{{$navlink}}" style="color: {{$navLinkColor}}">
+                   <i class="bi bi-circle " ></i><span>Add Enquiry</span>
                  </a>
                </li>
                <li>
-                 <a href="components-badges.html">
-                   <i class="bi bi-circle"></i><span>New Enquiry</span>
+                 <a href="{{url('/')}}/Newinquiry" class="{{$navlink}}" style="color: {{$navLinkColor}}" >
+                   <i class="bi bi-circle  "></i><span>New Enquiry</span>
                  </a>
                </li>
                <li>
-                 <a href="components-breadcrumbs.html">
-                   <i class="bi bi-circle"></i><span>Client Details</span>
+                 <a href="{{url('/')}}/ClientDetail" class="{{$navlink}}" style="color: {{$navLinkColor}}">
+                   <i class="bi bi-circle  "></i><span>Client Details</span>
                  </a>
                </li>
                <li>
-                 <a href="components-buttons.html">
-                   <i class="bi bi-circle"></i><span>Purposal Details</span>
+                 <a href="{{url('/')}}/proposaldetails" class="{{$navlink}}"style="color: {{$navLinkColor}}">
+                   <i class="bi bi-circle " ></i><span>Purposal Details</span>
                  </a>
                </li>
                <li>
-                 <a href="components-cards.html">
-                   <i class="bi bi-circle"></i><span>Pending Follow up</span>
+                 <a href="{{url('/')}}/pendingFollowup" class="{{$navlink}}" style="color: {{$navLinkColor}}" >
+                   <i class="bi bi-circle  "></i><span>Pending Follow up</span>
                  </a>
                </li>
                <li>
-                 <a href="components-carousel.html">
-                   <i class="bi bi-circle"></i><span>Done Follow up</span>
+                 <a href="{{url('/')}}/doneFollowup" class="{{$navlink}}" style="color: {{$navLinkColor}}" >
+                   <i class="bi bi-circle " ></i><span>Done Follow up</span>
                  </a>
                </li>
                <li>
-                 <a href="components-list-group.html">
-                   <i class="bi bi-circle"></i><span>Allocated Leads to me</span>
+                 <a href="{{url('/')}}/lead" class="{{$navlink}}"style="color: {{$navLinkColor}}">
+                   <i class="bi bi-circle  " ></i><span>Allocated Leads to me</span>
                  </a>
                </li>
             
@@ -71,7 +83,7 @@
           
        
            <li class="nav-item">
-             <a class="nav-link collapsed" href="users-profile.html">
+             <a class="{{$navlink}} collapsed" href="{{url('/')}}/chat" style="color:{{$navLinkColor}}">
                <i class="bi bi-chat"></i>
                <span>Chat</span>
              </a>
@@ -80,14 +92,14 @@
 
 
            <li class="nav-item">
-            <a class="nav-link collapsed" href="users-profile.html">
+            <a class="{{$navlink}} collapsed" href="{{url('/')}}/setting"  style="color:{{$navLinkColor}}">
               <i class="bi bi-gear"></i>
               <span>Setting</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link collapsed" href="users-profile.html">
+            <a class="{{$navlink}} collapsed" href="{{url('/')}}/createuser"  style="color:{{$navLinkColor}}">
               <i class="bi bi-person-add"></i>
               <span>Create User</span>
             </a>
@@ -95,7 +107,7 @@
 
        
            <li class="nav-item">
-             <a class="nav-link collapsed" href="pages-login.html">
+             <a class="{{$navlink}} collapsed" href="{{url('/')}}"  style="color: {{$navLinkColor}}">
                <i class="bi bi-box-arrow-in-right"></i>
                <span>Logout</span>
              </a>

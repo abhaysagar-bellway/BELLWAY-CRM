@@ -25,7 +25,7 @@
       </a>
       <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-          <a href="components-alerts.html">
+          <a href="">
             <i class="bi bi-circle"></i><span>Search Enquiry</span>
           </a>
         </li>

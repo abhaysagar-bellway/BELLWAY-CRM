@@ -51,7 +51,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.1/echarts.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
-<body id="dashboard">
+@php
+$dashboardColorClass = 'dashboard';
+@endphp
+
+@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser'))
+@php
+   $dashboardColorClass = '';
+@endphp
+@endif
+<body class="{{$dashboardColorClass}}">
 
 <div class="container">
     <div class="row">
