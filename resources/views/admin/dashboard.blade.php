@@ -14,9 +14,6 @@
   {{-- todo --}}
   @include('layout.todo')
   </div>
-  
-  
-  
 </div>
   
   <div class="row">
