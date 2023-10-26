@@ -1,65 +1,93 @@
 
-<div class="col-12">
-    <section class="section dashboard">
-       <!-- Customers Card -->
+  <div class="col-6">
+  <section class="section dashboard">
 
-            <!-- Reports -->
-      
-              <div class="card" >
+    
+            <div class="card" >
 
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
+              <div class="filter">
+                <button type="button" class="btn icon" style="background-color: #1B2137" data-bs-toggle="dropdown" >
+                  This Week <i class="bi bi-caret-down-fill"></i>
+                  </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
 
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
+              </div>
 
-                <div class="card-body">
-                  <h5 class="card-title">Reports <span>/Today</span></h5>
+              <div class="card-body">
+                <h5 class="card-title">599</h5>
+                <h5 class="card-heading">Total Deal Done</h5>
 
-                  <!-- Line Chart -->
-                  <div id=""></div>
-
-      
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<body>
-
-<canvas id="myChart" style="width:100%;max-width:600px, background-color: #000000;"></canvas>
-
-<script>
-var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-var yValues = [55, 49, 44, 24, 15];
-var barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
-    }
-  }
-});
-</script>
-                  
-                </div>
-
+                <!-- bar chart -->
              
-            </div><!-- End Reports -->
-          </section>
-        </div>
+     
 
+                <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
+
+
+
+
+
+                <script>
+
+var bar_ctx = document.getElementById('barChart').getContext('2d');
+
+var background_1 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+background_1.addColorStop(0, '#3CFFC2');
+background_1.addColorStop(1, '#E2EC76');
+
+var background_2 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+background_2.addColorStop(0, '#3CFFC2');
+background_2.addColorStop(1, '#E2EC76');
+
+var background_3 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+background_3.addColorStop(0, '#3CFFC2');
+background_3.addColorStop(1, '#E2EC76');
+
+var background_4 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+background_4.addColorStop(0, '#3CFFC2');
+background_4.addColorStop(1, '#E2EC76');
+
+var background_5 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+background_5.addColorStop(0, '#3CFFC2');
+background_5.addColorStop(1, '#E2EC76');
+
+var background_6 = bar_ctx.createLinearGradient(0, 0, 0, 600);
+background_6.addColorStop(0, '#3CFFC2');
+background_6.addColorStop(1, '#E2EC76');
+
+
+                var xbarValues = [22, 33, 44, 55, 66, 77];
+                var yValues = [55, 49, 44, 24, 15, 30, 40 ];
+                var barColors = [background_1, background_2, background_3, background_4, background_5, background_6];
+                
+                new Chart("barChart", {
+                  type: "bar",
+                  data: {
+                    labels: xbarValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    legend: {display: false},
+                    title: {
+                      display: true,
+                      text: "World Wine Production 2018"
+                    }
+                  }
+                });
+                </script>
+              </div>
+
+           
+          </div>
+        </section>
+      </div>

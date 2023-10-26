@@ -1,37 +1,44 @@
- 
-    <div class="col-3 ">
+@php
+$sidebarClass = '';
+$sidebarWidth = '';
+$sidebarLogo = '';
+$sidebarPadding = '';
+
+@endphp
+@if(Request::is('chat'))
+@php
+$sidebarClass = 'none';
+$sidebarWidth = '50px';
+$sidebarLogo = '20px';
+$sidebarPadding = '50px';
+@endphp
+@endif
+
+    <div class="col-3" style="width: 20%">
 
         <!-- ======= Sidebar ======= -->
-        @php
-            $dashboardColorClass = 'dashboard-color';
-            $navlink = 'nav-link';
-            $navLinkColor = '';
-         @endphp
-       @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser'))
-          @php
-            $dashboardColorClass = '';
-            $navLinkColor = '#444444';
-          @endphp
-        @endif
-          
-         <aside id="sidebar" class="sidebar {{ $dashboardColorClass }}">
+         <aside id="sidebar" class="sidebar dashboard-color" style="width: {{$sidebarWidth}}">
        
          <div class="sidebar-logo">
-           <img src="assets/img/bellway-logo.png" alt="" class="logo">
+           <img src="assets/img/bellway-logo.png" alt="" class="logo" style="width: {{$sidebarLogo}}; padding-bottom : {{$sidebarPadding}}">
          </div>
        
+           <h1 class="logo-heading" id="logoHeading" style="color:  #3DFFC1; display: {{$sidebarClass}}">Bellway CRM</h1>
            <h1 class="logo-heading" style="color:#3DFFC1;">Bellway Infotech</h1>
        
          <ul class="sidebar-nav" id="sidebar-nav">
           
            <li class="nav-item">
+             <a class="nav-link " href="">
              <a class="{{$navlink}}" href="{{url('/')}}/dashboard" style="color: {{$navLinkColor}}">
                <i class="bi bi-grid"></i>
-               <span>Dashboard</span>
+               <span style="font-weight: 600; display: {{$sidebarClass}}">Dashboard</span>
              </a>
            </li><!-- End Dashboard Nav -->
        
            <li class="nav-item">
+             <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+               <i class="bi bi-menu-button-wide"></i><span  style="display: {{$sidebarClass}}">Enquiry</span><i style="display: {{$sidebarClass}}" class="bi bi-chevron-down ms-auto"></i>
              <a class="{{$navlink}} collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="" style="color: {{$navLinkColor}}">
                <i class="bi bi-menu-button-wide"></i><span>Enquiry</span><i class="bi bi-chevron-down ms-auto"></i>
              </a>
@@ -83,9 +90,10 @@
           
        
            <li class="nav-item">
+             <a class="nav-link collapsed" href="{{url('/')}}/chat" >
              <a class="{{$navlink}} collapsed" href="{{url('/')}}/chat" style="color:{{$navLinkColor}}">
                <i class="bi bi-chat"></i>
-               <span>Chat</span>
+               <span  style="display: {{$sidebarClass}}">Chat</span>
              </a>
            </li><!-- End chat Page Nav -->
        
@@ -94,26 +102,59 @@
            <li class="nav-item">
             <a class="{{$navlink}} collapsed" href="{{url('/')}}/setting"  style="color:{{$navLinkColor}}">
               <i class="bi bi-gear"></i>
-              <span>Setting</span>
+              <span  style="display: {{$sidebarClass}}">Setting</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="{{$navlink}} collapsed" href="{{url('/')}}/createuser"  style="color:{{$navLinkColor}}">
               <i class="bi bi-person-add"></i>
-              <span>Create User</span>
+              <span  style="display: {{$sidebarClass}}">Create User</span>
             </a>
           </li>
 
        
            <li class="nav-item">
              <a class="{{$navlink}} collapsed" href="{{url('/')}}"  style="color: {{$navLinkColor}}">
+             <a class="nav-link collapsed" href="">
                <i class="bi bi-box-arrow-in-right"></i>
-               <span>Logout</span>
+               <span  style="display: {{$sidebarClass}}">Logout</span>
              </a>
            </li><!-- End Logout Page Nav -->
        
          </ul>
        
           </aside><!-- End Sidebar-->
+
        </div>
+
+
+       {{-- <script>
+
+        
+        function openSideBar() {
+          document.getElementById("sidebar").style.width = "250px";
+      
+        }
+
+        document.getElementById("chatId").addEventListener("click", function(event){
+        
+  event.preventDefault()
+  document.getElementById("sidebar").style.width = "50px";
+          document.getElementById("sidebarLogo").style.width = "20px";
+          document.getElementById("sidebarLogo").style.paddingBottom = "50px";
+          document.getElementById("logoHeading").style.display = "none";
+          document.getElementById("dashboardHeading").style.display = "none";
+          document.getElementById("enquiryHeading").style.display = "none";
+          document.getElementById("dropdownIcon").style.display = "none";
+          document.getElementById("chatHeading").style.display = "none";
+          document.getElementById("settingHeading").style.display = "none";
+          document.getElementById("createUserHeading").style.display = "none";
+          document.getElementById("logOutHeading").style.display = "none";
+  
+    
+         
+      
+});
+
+        </script> --}}

@@ -1,10 +1,10 @@
+<div class="col-6">
 <section class="section dashboard">
-
-
-    <!-- Website Traffic -->
     <div class="card">
       <div class="filter">
-        <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+        <button type="button" class="btn icon" style="background-color: #1B2137" data-bs-toggle="dropdown" >
+          This Week <i class="bi bi-caret-down-fill"></i>
+          </button>
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
           <li class="dropdown-header text-start">
             <h6>Filter</h6>
@@ -16,67 +16,44 @@
         </ul>
       </div>
 
-      <div class="card-body pb-0">
-        <h5 class="card-title">Website Traffic <span>| Today</span></h5>
+      <div class="card-body pb-20">
+        <h5 class="card-title">200</h5>
+        <h5 class="card-heading">Total Follow up</h5>
+             <canvas id="doughnutChart" style="width:100%;max-width:600px"></canvas>
 
-        <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
-
-        <script>
-          document.addEventListener("DOMContentLoaded", () => {
-            echarts.init(document.querySelector("#trafficChart")).setOption({
-              tooltip: {
-                trigger: 'item'
-              },
-              legend: {
-                top: '5%',
-                left: 'center'
-              },
-              series: [{
-                name: 'Access From',
-                type: 'pie',
-                radius: ['40%', '70%'],
-                avoidLabelOverlap: false,
-                label: {
-                  show: false,
-                  position: 'center'
-                },
-                emphasis: {
-                  label: {
-                    show: true,
-                    fontSize: '18',
-                    fontWeight: 'bold'
-                  }
-                },
-                labelLine: {
-                  show: false
-                },
-                data: [{
-                    value: 1048,
-                    name: 'Search Engine'
-                  },
-                  {
-                    value: 735,
-                    name: 'Direct'
-                  },
-                  {
-                    value: 580,
-                    name: 'Email'
-                  },
-                  {
-                    value: 484,
-                    name: 'Union Ads'
-                  },
-                  {
-                    value: 300,
-                    name: 'Video Ads'
-                  }
-                ]
-              }]
-            });
-          });
-        </script>
+             <script>
+             var xDoughnutValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+             var yValues = [55, 49, 44, 24, 15];
+             var barColors = [
+               "#b91d47",
+               "#00aba9",
+               "#2b5797",
+               "#e8c3b9",
+               "#1e7145"
+             ];
+             
+             new Chart("doughnutChart", {
+               type: "doughnut",
+               data: {
+                //  labels: xDoughnutValues,
+                 datasets: [{
+                   backgroundColor: barColors,
+                   data: yValues
+                 }]
+               },
+               options: {
+                 title: {
+                   display: false,
+                   text: "World Wide Wine Production 2018"
+                 }
+                 
+               }
+             });
+             </script>
 
       </div>
-    </div><!-- End Website Traffic -->
+    </div>
 
 
+  </section>
+</div>

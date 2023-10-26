@@ -1446,3 +1446,115 @@ flex-direction: row;
 justify-content: center;
 align-items: center;
 }
+
+/* Enquiry CSS */
+
+.enquiry-title h1 {
+  margin-left: 230px;
+  padding: 25px 46px;
+  color: white;
+  font-weight: bold;
+  font-size: 41px;
+}
+
+
+.enquiry-row {
+  padding: 6px 10px;
+  margin: 0px 0px 0px 243px;
+}
+
+.col-md-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.input-box-enquiry {
+  height: 45px;
+  width: 350px;
+  border-radius: 0%;
+  border-color: #00000040;
+  background-image: linear-gradient(180deg, #3E4768, #1B2137);
+  color: #ffffff !important;
+  box-shadow: 10px 10px 20px #00000040;
+}
+
+.submit {
+  font-size: 20px;
+  font-family: "Poppins";
+  font-weight: 30px;
+  color: rgba(255, 255, 255, 1);
+  width: 200px;
+  height: 40px
+}
+
+.inquiry-lable {
+  margin-bottom: 1.5rem;
+}
+
+.row-text {
+
+  color: white;
+  font-size: 13px;
+}
+
+.logo-head {
+  padding: 0px 50px 30px 268px;
+}
+
+.inquiry-logo {
+  height: 40px;
+  width: 40px;
+  padding: 9px;
+  margin: 6px;
+}
+
+#inquiry-header {
+  margin: 15px 0px;
+  color: black;
+  font-weight: bold;
+}
+
+.inquiry-header {
+  background-color: #E8F5FC;
+  height: 50px;
+  padding: 0px;
+  display: flex;
+  border-radius: 15px 15px 2px 2px;
+}
+
+.input-inline-inquiry {
+  display: flex;
+  flex-direction: row;
+  margin: 6px 1px;
+}
+
+.submit-btn{   
+   padding: 8px 85px;
+  border-radius: 10px;
+  background-color: green;
+  font-size: 18px;
+  color: white;
+}
+.submit-inquiry{
+padding: 20px;
+}
+
+.submit-btn-cancel{
+  background-color: red;
+  padding: 8px 85px;
+  color: whitesmoke;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#add-icon{
+  font-size: 25px;
+  display: flex;
+  padding-left: 500px;
+  margin: 10px;
+}
+.small-text{
+  font-size: 15px;
+    padding: 0px;
+    margin: 10px -5px;
+}
