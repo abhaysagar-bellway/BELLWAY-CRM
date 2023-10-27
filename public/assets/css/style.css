@@ -1577,3 +1577,39 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
  bottom: .5em;
 }
+
+
+/* create user dropdown */
+
+.dropbtn {
+  padding: 16px 160px;
+  font-size: 16px;
+  border: none;
+}
+.dropdown{
+  margin-left: -16px;
+}
+
+.dropdown-content {
+  display: none;
+  min-width: 160px;
+  padding: 0px 80px 8px 82px;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  padding: 12px 150px;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color:#e9f6fd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color:#e9f6fd;}
+
+
+.create-user{
+  margin-left: -2px;
+}
