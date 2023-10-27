@@ -1,9 +1,11 @@
+
+
 @include('layout.header')
- 
+
 @include('layout.sidebar')
 
 
-<div class="col-9" style="width: 80%">
+<div class="col-10" style="width: 80%">
 @include('layout.navbar')
 <div class="row">
 <div class="col-8">
@@ -32,7 +34,6 @@
 
 
 </div>
-
 
 
 

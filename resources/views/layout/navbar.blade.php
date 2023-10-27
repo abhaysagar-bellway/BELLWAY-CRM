@@ -1,7 +1,17 @@
+@php
+$navbarBackground = '';
+$navbarInputBackground = '#E8F5FC'
+@endphp
+@if(Request::is('chat'))
+@php
+$navbarBackground = '#1B2137';
+$navbarInputBackground = '#FFFFFF1F'
+@endphp
+@endif
 
     <div class="row">
       <div class="col-sm-12">
-        <header id="header" class="header top-fixed d-flex align-items-center">
+        <header id="header" class="header top-fixed d-flex align-items-center" style="background: {{$navbarBackground}}">
   
           {{-- <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
@@ -21,7 +31,7 @@
           <div class="search-bar">
             <form class="search-form d-flex align-items-center" method="POST" action="">
               
-              <input type="text" name="query" placeholder="Search your query" title="Enter search keyword" style="background-color: #E8F5FC; height: 30px; font-size: 12px">
+              <input type="text" name="query" placeholder="Search your query" title="Enter search keyword" style="background-color: {{$navbarInputBackground}}; height: 30px; font-size: 12px">
               <button type="submit" title="Search"><i class="bi bi-search"></i></button>
             </form>
           </div><!-- End Search Bar -->
