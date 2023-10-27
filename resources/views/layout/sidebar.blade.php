@@ -124,23 +124,12 @@ $backgroundColor = '#1B2137'
                <i class="bi bi-box-arrow-in-right"></i>
                <span  style="display: {{$sidebarClass}}">Logout</span>
              </a>
-           </li><!-- End Logout Page Nav -->
+           </li>
        
          </ul>
        
-          </aside><!-- End Sidebar-->
+          </aside>
 
        </div>
 
 
-       {{-- <script>
-
-        
-        function openSideBar() {
-          document.getElementById("sidebar").style.width = "250px";
-      
-        }
-
-   
-
-        </script> --}}
