@@ -31,6 +31,7 @@ Route::get('/dashboard',[DashboardController::class,'dashboard']);
 Route::get('/search-inquiry',[InquiryController::class,'Searchinquiry']);
 Route::post('/search-inquiry-data',[InquiryController::class,'searchInquiryData'])->name('inquiry.search');
 Route::get('/Addinquiry',[InquiryController::class,'Addinquiry']);
+Route::post('/Addinquiry',[InquiryController::class,'saveInquiryData']);
 Route::get('/Newinquiry',[InquiryController::class,'Newinquiry']);
 Route::get('/ClientDetail',[ClientDetailController::class,'ClientDetail']);
 Route::get('/proposaldetails',[ProposalDetailsController::class,'proposaldetails']);

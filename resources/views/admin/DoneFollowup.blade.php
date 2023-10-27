@@ -9,21 +9,13 @@
         <div class="inquiry-header">
             <label for="date"class="inquiry-lable"><img src="assets/img/search-enquiry.png" alt=""
                     class="inquiry-logo"></label>
-            <h3 id="inquiry-header">New Enquiry</h3>
-            <a href="{{ url('/') }}/Addinquiry"> <i class="bi bi-plus-circle" id="add-icon"></i>
-                <p class="small-text">Add</p>
-            </a>
-        </div>
-        <div class="upload-file">
-            <div class="mb-3">
-                <input class="form-control-sm" id="formFileSm" type="file">
-            </div>
+            <h3 id="inquiry-header">Done Follow Up</h3>
         </div>
     </div>
 
     <div class="enquiry-container">
 
-        <form action="{{ url('/') }}/Newinquiry" method="POST">
+        <form action="{{ url('/') }}/doneFollowup" method="POST">
             @csrf
             <div class="enquiry-row row ">
                 <div class="form-group col-md-6">
@@ -54,6 +46,7 @@
                     </div>
 
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Sector</label>
                     <div class="input-inline-inquiry"><label for="sector" class="inquiry-lable"><img
@@ -85,7 +78,18 @@
                                
                     </div>
 
+                </div> 
+
+                <div class="form-group col-md-6">
+                    <label for="text" class="row-text">Assigned</label>
+                    <div class="input-inline-inquiry"><label for="assign" class="inquiry-lable"><img
+                                src="assets/img/assigned.png" alt="" class="form-icon"></label>
+                        <input type="name" class="form-control input-box-enquiry rectangle" name="assigned"
+                            id="" aria-describedby="" placeholder="Assigned">
+                    </div>
+
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="name" class="row-text">City</label>
                     <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img
