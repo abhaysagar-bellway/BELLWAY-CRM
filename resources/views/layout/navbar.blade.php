@@ -1,7 +1,17 @@
+@php
+$navbarBackground = '';
+$navbarInputBackground = '#E8F5FC'
+@endphp
+@if(Request::is('chat'))
+@php
+$navbarBackground = '#1B2137';
+$navbarInputBackground = '#FFFFFF1F'
+@endphp
+@endif
 
     <div class="row">
       <div class="col-sm-12">
-        <header id="header" class="header top-fixed d-flex align-items-center">
+        <header id="header" class="header top-fixed d-flex align-items-center" style="background: {{$navbarBackground}}">
   
           {{-- <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
@@ -10,11 +20,18 @@
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
           </div><!-- End Logo --> --}}
+          @if(Request::is('dashboard'))
+<style>
+  input::placeholder{
+    color: black !important;
+  }
+</style>
+@endif
       
           <div class="search-bar">
             <form class="search-form d-flex align-items-center" method="POST" action="">
               
-              <input type="text" name="query" placeholder="Search your query" title="Enter search keyword" style="background-color: #E8F5FC">
+              <input type="text" name="query" placeholder="Search your query" title="Enter search keyword" style="background-color: {{$navbarInputBackground}}; height: 30px; font-size: 12px">
               <button type="submit" title="Search"><i class="bi bi-search"></i></button>
             </form>
           </div><!-- End Search Bar -->
@@ -31,8 +48,8 @@
               <li class="nav-item dropdown">
       
                 <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                  <i class="bi bi-bell"></i>
-                  <span class="badge bg-primary badge-number">4</span>
+                  <i class="bi bi-bell-fill"></i>
+            <i class="bi bi-dot badge-number"></i>
                 </a><!-- End Notification Icon -->
       
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
@@ -106,8 +123,11 @@
               <li class="nav-item dropdown">
       
                 <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                  <i class="bi bi-chat-left-text"></i>
-                  <span class="badge bg-success badge-number">3</span>
+                      <i class="bi bi-circle-fill"></i>
+                      <i class="bi bi-dot online-icon"></i>
+                    <i class="bi bi-caret-down-fill online-dropdown-icon"></i>
+              
+                 
                 </a><!-- End Messages Icon -->
       
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
