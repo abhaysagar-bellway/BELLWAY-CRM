@@ -56,17 +56,21 @@
 </head>
 
 @php
-$dashboardColorClass = 'dashboard';
+$dashboardColorClass = 'dashboard-background';
 @endphp
 
 @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser'))
 @php
    $dashboardColorClass = '';
 @endphp
+
 @endif
-<body class="{{$dashboardColorClass}}">
+
+
+<body class="{{$dashboardColorClass}}" >
 
 <div class="container">
     <div class="row">
 
 
+  
