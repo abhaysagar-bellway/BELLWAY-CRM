@@ -50,10 +50,19 @@
                     <label for="text" class="row-text">Sector</label>
                     <div class="input-inline-inquiry"><label for="sector" class="inquiry-lable"><img
                                 src="assets/img/sector.png" alt="" class="form-icon"></label>
-                        <input type="sector" class="form-control input-box-enquiry rectangle" name="sector"
-                            id="" aria-describedby="" placeholder="Sector">
+                            <select class="form-control input-box-enquiry rectangle" name="sector" aria-label="Default select example">
+                                <option selected>choose option</option>
+                                <option value="E-Commerce web">E-Commerce web</option>
+                                  <option value="Property">Property</option>
+                                  <option value="Mobile App">Mobile App</option>
+                                  <option value="grocery">grocery</option>
+                                  <option value="Food">Food</option>
+                                  <option value="Transport">Transport</option>
+                                  <option value="Hotel">Hotel</option>
+                                  <option value="Toor and Travels">Toor and Travels</option>
+                                  <option value="Milk Production /Dairy">Milk Production /Dairy</option>
+                              </select>           
                     </div>
-
                 </div>
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Assigning</label>
@@ -77,8 +86,11 @@
                     <label for="text" class="row-text">Domain</label>
                     <div class="input-inline-inquiry"><label for="domain" class="inquiry-lable"><img
                                 src="assets/img/domain.png" alt="" class="form-icon"></label>
-                        <input type="domain" class="form-control input-box-enquiry rectangle" name="domain"
-                            id="" aria-describedby="" placeholder="Domain">
+                                <select class="form-control input-box-enquiry rectangle" name="domain" aria-label="Default select example">
+                                    <option selected>choose option</option>
+                                    <option value="Web Application">Web Application</option>
+                                      <option value="Mobile Application">Mobile Application</option>
+                                  </select>     
                     </div>
 
                 </div>

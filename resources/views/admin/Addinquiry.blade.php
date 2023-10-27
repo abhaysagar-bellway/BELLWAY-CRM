@@ -22,7 +22,7 @@
                     <label for="text" class="row-text">Company Name</label>
                     <div class="input-inline-inquiry"><label for="text" class="inquiry-lable"><img
                                 src="assets/img/company.png" alt="" class="form-icon"></label>
-                        <input type="name" class="form-control input-box-enquiry rectangle" name="company"
+                        <input type="name" class="form-control input-box-enquiry rectangle" name="company_name"
                             id="" aria-describedby="date" placeholder="Enter the Company Name">
                     </div>
 
@@ -33,14 +33,14 @@
                     <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img
                                 src="assets/img/city.png" alt="" class="form-icon"></label>
                         <input type="name" class="form-control input-box-enquiry rectangle" name="city"
-                            id="" aria-describedby="" placeholder="Indore">
+                            id="" aria-describedby="" placeholder="City">
                     </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="number" class="row-text">Contact Number</label>
                     <div class="input-inline-inquiry"><label for="number" class="inquiry-lable"><img
                                 src="assets/img/call.png" alt="" class="form-icon"></label>
-                        <input type="number" class="form-control input-box-enquiry rectangle" name="contact_Number"
+                        <input type="number" class="form-control input-box-enquiry rectangle" name="contact_number"
                             id="" aria-describedby="date" placeholder="Contact Number">
                     </div>
                 </div>
@@ -49,8 +49,12 @@
                     <label for="text" class="row-text">Domain</label>
                     <div class="input-inline-inquiry"><label for="domain" class="inquiry-lable"><img
                                 src="assets/img/domain.png" alt="" class="form-icon"></label>
-                        <input type="domain" class="form-control input-box-enquiry rectangle" name="domain"
-                            id="" aria-describedby="" placeholder="Domain">
+                                <select class="form-control input-box-enquiry rectangle" name="domain" aria-label="Default select example">
+                                    <option selected>choose option</option>
+                                    <option value="Web Application">Web Application</option>
+                                      <option value="Mobile Application">Mobile Application</option>
+                                  </select>  
+                               
                     </div>
 
                 </div>
@@ -69,17 +73,28 @@
                     <label for="text" class="row-text">Sector</label>
                     <div class="input-inline-inquiry"><label for="sector" class="inquiry-lable"><img
                                 src="assets/img/sector.png" alt="" class="form-icon"></label>
-                        <input type="sector" class="form-control input-box-enquiry rectangle" name="sector"
-                            id="" aria-describedby="" placeholder="Sector">
+                            <select class="form-control input-box-enquiry rectangle" name="sector" aria-label="Default select example">
+                                <option selected>choose option</option>
+                                <option value="E-Commerce web">E-Commerce web</option>
+                                  <option value="Property">Property</option>
+                                  <option value="Mobile App">Mobile App</option>
+                                  <option value="grocery">grocery</option>
+                                  <option value="Food">Food</option>
+                                  <option value="Transport">Transport</option>
+                                  <option value="Hotel">Hotel</option>
+                                  <option value="Toor and Travels">Toor and Travels</option>
+                                  <option value="Milk Production /Dairy">Milk Production /Dairy</option>
+                              </select>           
                     </div>
-
                 </div>
+
+                
 
                 <div class="form-group col-md-6">
                     <label for="number" class="row-text">Alternative Number</label>
                     <div class="input-inline-inquiry"><label for="number" class="inquiry-lable"><img
                                 src="assets/img/state.png" alt="" class="form-icon"></label>
-                        <input type="number" class="form-control input-box-enquiry rectangle" name="number"
+                        <input type="number" class="form-control input-box-enquiry rectangle" name="alternativenumber"
                             id="" aria-describedby="" placeholder="Alternative Number">
                     </div>
 
@@ -89,7 +104,7 @@
                     <label for="date" class="row-text">Enquiry Date</label>
                     <div class="input-inline-inquiry"><label for="date" class="inquiry-lable"><img
                                 src="assets/img/date-logo.png" alt="" class="form-icon"></label>
-                        <input type="date" class="form-control input-box-enquiry rectangle" name="date"
+                        <input type="date" class="form-control input-box-enquiry rectangle" name="enquirydate"
                             id="" aria-describedby="" placeholder="Enquiry Date">
                     </div>
 
@@ -99,7 +114,7 @@
                     <label for="email" class="row-text">Alternative Email ID</label>
                     <div class="input-inline-inquiry"><label for="email" class="inquiry-lable"><img
                                 src="assets/img/alternativemail.png" alt="" class="form-icon"></label>
-                        <input type="email" class="form-control input-box-enquiry rectangle" name="email"
+                        <input type="email" class="form-control input-box-enquiry rectangle" name="alternativeemail"
                             id="" aria-describedby="" placeholder="Alternative Email ID ">
                     </div>
                 </div>
@@ -108,7 +123,7 @@
                     <label for="text" class="row-text">Publicity Medium</label>
                     <div class="input-inline-inquiry"><label for="text" class="inquiry-lable"><img
                                 src="assets/img/publicity.png" alt="" class="form-icon"></label>
-                        <input type="text" class="form-control input-box-enquiry rectangle" name="publicity"
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="publicity_medium"
                             id="" aria-describedby="" placeholder="Publicity Medium">
                     </div>
 
@@ -145,7 +160,7 @@
                     <label for="text" class="row-text">Remarks</label>
                     <div class="input-inline-inquiry"><label for="text" class="inquiry-lable"><img
                                 src="assets/img/remarks.png" alt="" class="form-icon"></label>
-                        <input type="text" class="form-control input-box-enquiry rectangle" name="text"
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="remarks"
                             id="" aria-describedby="" placeholder="Remarks">
                     </div>
                 </div>
@@ -168,6 +183,52 @@
             </div>
 
         </form>
+
+        <table id="dtHorizontalExample" class="table table-striped table-bordered table-sm" cellspacing="0"
+  width="100%">
+            <thead >
+              <tr>
+                <th scope="col">SNo.</th>
+                <th scope="col">CompanyName</th>
+                <th scope="col">City</th>
+                <th scope="col">ContactNumber</th>
+                <th scope="col">Domain</th>
+                <th scope="col">EmailID</th>
+                <th scope="col">Sector</th>
+                <th scope="col">AlternativeNumber</th>
+                <th scope="col">EnquiryDate</th>
+                <th scope="col">AlternativeEmailID</th>
+                <th scope="col">PublicMedium</th>
+                <th scope="col">Address</th>
+                <th scope="col">CustomerAnswers</th>
+                <th scope="col">State</th>
+                <th scope="col">Remarks</th>
+              </tr>
+            </thead>
+            <tbody>
+                @foreach ($inquiryData as $data)
+              <tr>
+                <th scope="row">{{$data->id}}</th>
+                <td>{{$data->company_name}}</td>
+                <td>{{$data->city}}</td>
+                <td>{{$data->contact_number}}</td>
+                <td>{{$data->domain}}</td>
+                <td>{{ $data->email}}</td>
+                <td>{{ $data->sector}}</td>
+                <td>{{$data->alternativenumber}}</td>
+                <td>{{$data->enquirydate}}</td>
+                <td>{{$data->alternativeemail}}</td>
+                <td>{{$data->publicity_medium}}</td>
+                <td>{{$data->address}}</td>
+                <td>{{$data->customer_answere}}</td>
+                <td>{{$data->state }}</td>
+                <td>{{$data->remarks}}</td>
+              </tr>
+                @endforeach
+              
+            </tbody>
+          </table>
+
     </div>
     @include('layout.footer')
 </div>

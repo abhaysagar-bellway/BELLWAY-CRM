@@ -1473,9 +1473,10 @@ input::placeholder {
 }
 
 #inquiry-header {
-  margin: 15px 0px;
+  margin: 15px 50px;
   color: black;
   font-weight: bold;
+  position: absolute;
 }
 
 .inquiry-header {
@@ -1514,11 +1515,65 @@ padding: 20px;
 #add-icon{
   font-size: 25px;
   display: flex;
-  padding-left: 500px;
+  padding-left: 510px;
+  color: black;
   margin: 10px;
 }
 .small-text{
-  font-size: 15px;
-    padding: 0px;
-    margin: 10px -5px;
+  font-size: 16px;
+  padding: 0px 389px 0px;
+  margin-top: -34px;
+  margin-left: 159px;
+  text-align: none;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.upload-file
+{
+  margin-left: 678px;
+    margin-top: -36px;
+    color: black
+}
+
+input[type=file] {
+  display: block;
+  color: black;
+  background: azure;
+  margin: 0px -40px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: calc(4.25rem + 2px);
+}
+
+select option {
+  color:#1B2137 ;
+}
+
+.table{
+  margin-left: 260px;
+  overflow-x: auto;
+}
+
+.dtHorizontalExampleWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+#dtHorizontalExample th, td {
+  white-space: nowrap;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+ bottom: .5em;
 }
