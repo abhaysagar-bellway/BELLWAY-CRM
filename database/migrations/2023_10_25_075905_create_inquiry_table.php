@@ -13,15 +13,20 @@ return new class extends Migration
     {
         Schema::create('inquiry', function (Blueprint $table) {
             $table->id();
-            $table->date('start');
-            $table->date('end');
-            $table->string('publicity');
-            $table->string('sector');
-            $table->string('assigning');
-            $table->string('assigned');
-            $table->string('domain');
+            $table->string('company_name');
             $table->string('city');
-            $table->string('state');
+            $table->string('contact_number');
+            $table->string('domain');
+            $table->string('email'); 
+            $table->string('sector');
+            $table->string('alternativenumber');
+            $table->date('enquirydate');
+            $table->string('alternativeemail');
+            $table->string('publicity_medium');
+            $table->string('address');
+            $table->string('customer_answere');
+            $table->string('state'); 
+            $table->string('remarks');
             $table->timestamps();
         });
     }
