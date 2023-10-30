@@ -2507,8 +2507,6 @@ flex-shrink: 0;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
-
-
   
 }
 .login-form{
@@ -2609,7 +2607,6 @@ margin-top: 50px;
 }
 .todo-list{
   color: #FFF;
-
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -3287,5 +3284,12 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
  bottom: .5em;
 }
-/* / Enquiry css end / */
-
+/* Enquiry css end */
+/* module-permission */
+#module-permission
+{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+/* module-permission */

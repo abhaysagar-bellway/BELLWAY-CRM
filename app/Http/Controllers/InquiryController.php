@@ -17,9 +17,7 @@ class InquiryController extends Controller
 
     public function Addinquiry(){
         $inquiryData = Inquiry::all();
-        
-        
-        return view('admin.Addinquiry',array('inquiryData'=>$inquiryData));
+      return view('admin.Addinquiry',array('inquiryData'=>$inquiryData));
     }
 
     public function saveInquiryData(Request $request)
