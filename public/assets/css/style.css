@@ -1286,7 +1286,7 @@ h6 {
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
-  color: #3DFFC1;
+  /* color: #3DFFC1; */
 
 
 }
@@ -1403,7 +1403,6 @@ input::placeholder {
 
 .todo-list {
   color: #FFF;
-
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
@@ -1411,7 +1410,7 @@ input::placeholder {
   line-height: 30px;
 }
 
-/* Enquiry CSS */
+/* Enquiry CSS start */
 
 .enquiry-title h1 {
   margin-left: 230px;
@@ -1577,39 +1576,5 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
  bottom: .5em;
 }
+/* Enquiry css end */
 
-
-/* create user dropdown */
-
-.dropbtn {
-  padding: 16px 160px;
-  font-size: 16px;
-  border: none;
-}
-.dropdown{
-  margin-left: -16px;
-}
-
-.dropdown-content {
-  display: none;
-  min-width: 160px;
-  padding: 0px 80px 8px 82px;
-}
-
-.dropdown-content a {
-  color: black;
-  text-decoration: none;
-  padding: 12px 150px;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color:#e9f6fd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color:#e9f6fd;}
-
-
-.create-user{
-  margin-left: -2px;
-}
