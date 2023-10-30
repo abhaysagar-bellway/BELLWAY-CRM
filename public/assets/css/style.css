@@ -1577,4 +1577,11 @@ table.dataTable thead .sorting_desc_disabled:before {
  bottom: .5em;
 }
 /* Enquiry css end */
-
+/* module-permission */
+#module-permission
+{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+/* module-permission */

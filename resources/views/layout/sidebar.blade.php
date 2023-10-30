@@ -16,7 +16,8 @@
              Request::is('lead') ||
              Request::is('chat') ||
              Request::is('setting') ||
-             Request::is('createuser'))
+             Request::is('createuser')||
+             Request::is('role'))
          @php
              $dashboardColorClass = '';
              $navLinkColor = '#444444';

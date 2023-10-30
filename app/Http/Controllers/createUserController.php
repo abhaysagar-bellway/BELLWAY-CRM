@@ -52,6 +52,9 @@ class createUserController extends Controller
          
     }
 
+    public function role(){
+        return view('admin.role');
+    }
     
        
 }
