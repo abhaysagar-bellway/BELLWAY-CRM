@@ -140,14 +140,16 @@ $sidebarHeading = '#3DFFC1';
           </a>
             <ul id="createuser" class="nav-content collapse dropdown-scroll" data-bs-parent="#sidebar-nav">
               <li>
-                <a href="{{url('/')}}/" class=" {{$navlink}}"style="color:{{$navLinkColor}}">
-                  <i class="bi bi-circle" ></i><span>Create User</span>
-                </a>
+                <a href="{{ url('/') }}/createuser"
+                             class=" {{ $navlink }}"style="color:{{ $navLinkColor }}">
+                             <i class="bi bi-circle"></i><span>Create Employee</span>
+                         </a>
               </li>
               <li>
-                <a href="{{url('/')}}" class="{{$navlink}}" style="color: {{$navLinkColor}}">
-                  <i class="bi bi-circle " ></i><span>Role</span>
-                </a>
+               <a href="{{ url('/') }}/role" class="{{ $navlink }}"
+                             style="color: {{ $navLinkColor }}">
+                             <i class="bi bi-circle "></i><span>Employee Role</span>
+                         </a>
               </li>
           </ul>
         </li>
@@ -164,5 +166,3 @@ $sidebarHeading = '#3DFFC1';
           </aside>
 
        </div>
-
-
