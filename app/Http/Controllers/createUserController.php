@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Employee;
+use App\Models\Role;
 
 class createUserController extends Controller
 {
@@ -53,7 +54,25 @@ class createUserController extends Controller
     }
 
     public function role(){
-        return view('admin.role');
+        $role = Role::all();
+        return view('admin.role',array('role' => $role));
+    }
+
+    public function addrole(Request $request)
+    {
+        $validatedData = $request->validate([
+            'rolename' => 'required|min:4',
+            'checkbox' => 'required',
+         ]);
+
+         $role = new Role;
+         $role->rolename = $request->rolename;   
+         $role->checkbox =  implode(" ,",$request->checkbox);
+         
+         
+         $role->save();
+         return redirect()->back()->with('status','Role Data Add Successfully!');
+
     }
     
        

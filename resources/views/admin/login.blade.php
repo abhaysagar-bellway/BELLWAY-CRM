@@ -93,7 +93,7 @@
                               </span>
                           </div>
                     
-                    <div class="form-group input-inline">
+                    {{-- <div class="form-group input-inline">
                         <label for="name"><img src="assets/img/username-logo.png" alt=""
                                 class="form-icon"></label>
                                 @php
@@ -107,13 +107,13 @@
                         <input type="name" class="form-control input-box rectangle" name="name" id=""
                             aria-describedby="emailHelpId" placeholder="Username" 
                            value="{{$name}}" >
-                    </div>
-                    <div class="input-inline">
+                        </div> --}}
+                    {{-- <div class="input-inline">
                         <span class="text-danger">
                             @error('name')
                                 {{ $message }}
                             @enderror </span>
-                    </div>
+                    </div> --}}
                     <div class="form-group input-inline">
                         <label for="password"><img src="assets/img/password-logo.png" alt=""
                                 class="form-icon"></label>

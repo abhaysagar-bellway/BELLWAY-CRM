@@ -25,9 +25,13 @@ use App\Http\Controllers\SettingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',[LoginController::class,'AdminLogin']);
+
+Route::middleware(['middleware'=> 'web'])->group(function () {
+    
+
+Route::get('/',[LoginController::class,'AdminLogin'])->middleware('route');
 Route::post('/login',[LoginController::class,'login'])->name('admin.submit');
-Route::get('/dashboard',[DashboardController::class,'dashboard']);
+Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 Route::get('/search-inquiry',[InquiryController::class,'Searchinquiry']);
 Route::post('/search-inquiry-data',[InquiryController::class,'searchInquiryData'])->name('inquiry.search');
 Route::get('/Addinquiry',[InquiryController::class,'Addinquiry']);
@@ -51,3 +55,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/todo', [DashboardController::class, 'addTodo']);
 
 Route::get('/role',[createUserController::class,'role']);
+Route::post('/role',[createUserController::class,'addrole']);
+
+});
