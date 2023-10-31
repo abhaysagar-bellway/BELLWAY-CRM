@@ -33,13 +33,10 @@
                    <script>
                    const xValues = ["MON", "TUE", "WED", "THU", "FRI", "SAT"];
                    const ylineValues = ["Facebook", "Freelancer", "Upwork", "Fiver", " Cold Calling"];
-
-                   
                    new Chart("myChart", {
                      type: "line",
                      data: {
                        labels: xValues,
-            
                        datasets: [{ 
                          data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
                          borderColor: "#3CFFC2",
@@ -51,8 +48,7 @@
                        },]
                      },
                      options: {
-                       legend: {display: false}
-                       
+                       legend: {display: false}         
                      }
                    });
                    </script>

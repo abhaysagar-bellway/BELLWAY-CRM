@@ -483,11 +483,9 @@ flex-shrink: 0;
   text-align: center;
   margin-right: 25px;
   position: relative;
-  background-color: #1B2137;
   border-radius: 16px;
   height: 30px;
   width: 30px;
-  padding-top: 3px;
 
 }
 
@@ -506,9 +504,9 @@ flex-shrink: 0;
 
 .header-nav .badge-number {
   position: absolute;
-  inset: -28px -22px auto auto;
+  inset: -22px -15px auto auto;
   font-weight: normal;
-  font-size: 50px;
+  font-size: 40px;
   padding: 3px 6px;
   border-radius: 16px;
   color: #08D110;
@@ -766,7 +764,7 @@ flex-shrink: 0;
   font-weight: 400;
   color: #ffffff;
   transition: 0.3;
-  padding: 10px 0 10px 40px;
+  padding: 10px 0 10px 20px;
   transition: 0.3s;
 }
 
@@ -1959,7 +1957,7 @@ flex-shrink: 0;
 
 .sidebar-nav .nav-link:hover {
   color: #4154f1;
-  background: #f6f9ff;
+  background: #1B2137;
 }
 
 .sidebar-nav .nav-link:hover i {
@@ -3166,10 +3164,12 @@ justify-content: end;
 
   color: white;
   font-size: 13px;
+  font-weight: normal;
 }
 
 .logo-head {
   padding: 0px 50px 30px 268px;
+  margin-top: 80px;
 }
 
 .inquiry-logo {
@@ -3203,7 +3203,8 @@ justify-content: end;
 .submit-btn{   
    padding: 8px 85px;
   border-radius: 10px;
-  background-color: green;
+  background: linear-gradient(180deg, #2C9223 0%, rgba(186, 201, 255, 0.00) 117.5%);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
   font-size: 18px;
   color: white;
 }
@@ -3212,11 +3213,12 @@ padding: 20px;
 }
 
 .submit-btn-cancel{
-  background-color: red;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #AB3030 0%, rgba(156, 138, 138, 0.00) 126.25%);
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
   padding: 8px 85px;
   color: whitesmoke;
   font-size: 20px;
-  border-radius: 10px;
 }
 
 #add-icon{
@@ -3284,12 +3286,52 @@ table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
  bottom: .5em;
 }
-/* Enquiry css end */
-/* module-permission */
+
 #module-permission
 {
   color: white;
   font-size: 25px;
   font-weight: bold;
 }
+
+
+
+.form-role{
+  color: whitesmoke;
+  font-weight: normal;
+  padding: 15px 34px;
+  font-style: normal;
+  font-size: medium;
+}
+#inlineCheckbox3{
+  font-weight: normal;
+}
+
+.chat-navbar-heading{
+  margin-right: 160px;
+  color: #ffffff;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+.total-container{
+  display: flex;
+  flex-direction: row;
+}
+.chat-list-status-icon{
+  margin-left: 80px;
+}
+.header-pagename{
+ margin-right: 280px;
+ margin-top: 10px;
+ color: #ffffff;
+}
+.dropdown-hover:hover{
+  color: black;
+}
+.message-received-container{
+  display: flex;
+  flex-direction: row;
+}
+=======
 /* module-permission */
+

@@ -16,9 +16,22 @@
           </ul>
         </div>
   
-        <div class="card-body pb-20">
-          <h5 class="card-title">200</h5>
-          <h5 class="card-heading">Total Follow up</h5>
+        <div class="card-body pb-20 total-container">
+         <div>
+          <h5 class="card-title">299</h5>
+          <h5 class="card-heading">Interested</h5>
+         </div>
+       
+          <div style="margin-left: 100px; margin-right:100px">
+            
+            <h5 class="card-title" > <i class="bi bi-currency-rupee"></i>10797288.00</h5>
+            <p style="color: #ffffff">Total Invoicing</p>
+          </div>
+          <div style="margin-left: 50px; margin-right:50px">
+            <h5 class="card-title"> <i class="bi bi-currency-dollar"></i>129.9K</h5>
+            <p style="color: #ffffff">Total Invoicing</p>
+          </div>
+          
 
         </div>
       </div>

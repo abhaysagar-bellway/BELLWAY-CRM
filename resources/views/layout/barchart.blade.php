@@ -21,8 +21,8 @@
               </div>
 
               <div class="card-body">
-                <h5 class="card-title">599</h5>
-                <h5 class="card-heading">Total Deal Done</h5>
+                <h5 class="card-title">299</h5>
+                <h5 class="card-heading">Total Follow up</h5>
 
                 <!-- bar chart -->
              

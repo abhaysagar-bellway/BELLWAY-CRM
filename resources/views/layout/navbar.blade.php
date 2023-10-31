@@ -1,12 +1,40 @@
 @php
 $navbarBackground = '';
-$navbarInputBackground = '#E8F5FC'
+$navbarInputBackground = '#E8F5FC';
+$chatNavbarHeading = '';
+$displayPageName = 'none';
+$dropdownIconColor = "";
+$pagename = '';
+$dashboardBellIcon = 'dashboard-bell-icon';
+$dashboardOnlineIcon = 'dashboard-online-icon';
 @endphp
 @if(Request::is('chat'))
 @php
 $navbarBackground = '#1B2137';
-$navbarInputBackground = '#FFFFFF1F'
+$navbarInputBackground = '#FFFFFF1F';
+$chatNavbarHeading = 'chat-navbar-heading';
+$displayPageName = 'block';
+$dropdownIconColor = "#E8F5FC";
+$pagename = 'Chat';
+$dashboardBellIcon = 'chat-bell-icon';
+$dashboardOnlineIcon = 'chat-online-icon';
 @endphp
+@endif
+
+
+
+
+
+@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting')||Request::is('createuser'))
+@php
+$navbarBackground = '#1B2137';
+$navbarInputBackground = '#FFFFFF1F';
+$chatNavbarHeading = 'chat-navbar-heading';
+$displayPageName = 'block';
+$pagename = 'Enquiry';
+$dropdownIconColor = "#E8F5FC"
+@endphp
+
 @endif
 
     <div class="row">
@@ -14,25 +42,34 @@ $navbarInputBackground = '#FFFFFF1F'
 
         <header id="header" class="header top-fixed d-flex align-items-center" style="background: {{$navbarBackground}}">
   
-          {{-- <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/logo.png" alt="">
-              <span class="d-none d-lg-block">NiceAdmin</span>
-            </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
-          </div><!-- End Logo --> --}}
+
+          @php
+          $headerUsername = '';
+          $displayUsername = 'none';
+          $displayPageName = 'block';
+          @endphp
           @if(Request::is('dashboard'))
 <style>
   input::placeholder{
     color: black !important;
   }
 </style>
+@php
+
+$displayUsername = 'block';
+$displayPageName = 'none';
+
+@endphp
 @endif
-      <div class="header-username">
+      <div class="header-username {{$chatNavbarHeading}}" style="display: {{$displayUsername}}">
         <h1 style="font-size: 16px; font-weight: 600">Hey Maaz</h1>
         <p>Here is your sales forecast dashboard </p>
       </div>
-          <div class="search-bar">
+      <div class="header-pagename" style="display: {{$displayPageName}}">
+        <h1 style="font-size: 36px; font-weight: 600">{{$pagename}}</h1>
+      </div>
+     <div style="display: flex">
+                <div class="search-bar">
             <form class="search-form d-flex align-items-center" method="POST" action="">
               
               <input type="text" name="query" placeholder="Search your query" title="Enter search keyword" style="background-color: {{$navbarInputBackground}}; height: 30px; font-size: 12px">
@@ -52,7 +89,7 @@ $navbarInputBackground = '#FFFFFF1F'
               <li class="nav-item dropdown">
       
                 <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                  <i class="bi bi-bell-fill"></i>
+                  <img src="assets/icon/{{$dashboardBellIcon}}.png" alt="bell-icon" class="rounded-circle nav-icon">
             <i class="bi bi-dot badge-number"></i>
                 </a><!-- End Notification Icon -->
       
@@ -108,9 +145,9 @@ $navbarInputBackground = '#FFFFFF1F'
               <li class="nav-item dropdown">
       
                 <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-                      <i class="bi bi-circle-fill"></i>
-                      <i class="bi bi-dot online-icon"></i>
-                    <i class="bi bi-caret-down-fill online-dropdown-icon"></i>
+                  <img src="assets/icon/{{$dashboardOnlineIcon}}.png" alt="online-icon" class="rounded-circle nav-icon">
+
+                    <i class="bi bi-caret-down-fill online-dropdown-icon" style="color: {{$dropdownIconColor}}"></i>
               
                  
                 </a><!-- End Messages Icon -->
@@ -176,9 +213,9 @@ $navbarInputBackground = '#FFFFFF1F'
       
               <li class="nav-item dropdown pe-3">
       
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                  <img src="assets/icon/profile-icon.png" alt="Profile" class="rounded-circle" style="height: 30px; width: 30px">
-                  <span class="d-none d-md-block dropdown-toggle ps-2"></span>
+                <a class="nav-link nav-icon nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                  <img src="assets/icon/profile-icon.png" alt="Profile" class="rounded-circle nav-icon">
+                  <i class="bi bi-caret-down-fill online-dropdown-icon" style="color: {{$dropdownIconColor}}; margin-left: 20px"></i>
                 </a><!-- End Profile Iamge Icon -->
       
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow  profile">
@@ -212,7 +249,7 @@ $navbarInputBackground = '#FFFFFF1F'
       
             </ul>
           </nav><!-- End Icons Navigation -->
-      
+        </div>
           </header><!-- End Header -->
        </div>
   </div>
