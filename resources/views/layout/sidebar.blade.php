@@ -38,7 +38,7 @@ $sidebarHeading = '#3DFFC1';
           $navlink = 'nav-link';
           $navLinkColor = '';
        @endphp
-     @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser'))
+     @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role'))
         @php
           $dashboardColorClass = '';
           $navLinkColor = '#444444';
@@ -141,12 +141,12 @@ $sidebarHeading = '#3DFFC1';
             <ul id="createuser" class="nav-content collapse dropdown-scroll" data-bs-parent="#sidebar-nav">
               <li>
                 <a href="{{ url('/') }}/createuser"
-                             class=" {{ $navlink }}"style="color:{{ $navLinkColor }}">
+                             class=" {{ $navlink }} dropdown-hover"style="color:{{ $navLinkColor }}">
                              <i class="bi bi-circle"></i><span>Create Employee</span>
                          </a>
               </li>
               <li>
-               <a href="{{ url('/') }}/role" class="{{ $navlink }}"
+               <a href="{{ url('/') }}/role" class="{{ $navlink }} dropdown-hover"
                              style="color: {{ $navLinkColor }}">
                              <i class="bi bi-circle "></i><span>Employee Role</span>
                          </a>

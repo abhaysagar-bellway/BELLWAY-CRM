@@ -25,18 +25,35 @@ $dashboardOnlineIcon = 'chat-online-icon';
 
 
 
-@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting')||Request::is('createuser'))
+@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting'))
 @php
 $navbarBackground = '#1B2137';
 $navbarInputBackground = '#FFFFFF1F';
 $chatNavbarHeading = 'chat-navbar-heading';
 $displayPageName = 'block';
 $pagename = 'Enquiry';
-$dropdownIconColor = "#E8F5FC"
+$dropdownIconColor = "#E8F5FC";
+$dashboardBellIcon = 'chat-bell-icon';
+$dashboardOnlineIcon = 'chat-online-icon';
 @endphp
 
 @endif
 
+
+
+
+@if(Request::is('createuser')||Request::is('role'))
+@php
+$navbarBackground = '#1B2137';
+$navbarInputBackground = '#FFFFFF1F';
+$chatNavbarHeading = 'chat-navbar-heading';
+$displayPageName = 'block';
+$dropdownIconColor = "#E8F5FC";
+$dashboardBellIcon = 'chat-bell-icon';
+$dashboardOnlineIcon = 'chat-online-icon';
+@endphp
+
+@endif
     <div class="row">
       <div class="col-sm-12">
 

@@ -1,15 +1,19 @@
-<div class="enquiry-container">
-    @include('layout.header')
-    @include('layout.sidebar')
+@include('layout.header')
+<div class="container">
+<div class="row">
+@include('layout.sidebar')
+<div class="col-10">
+@include('layout.navbar')
+</div>
+</div>
+
+</div>
     @if (session('status'))
         <div class="alert alert-success text-center success" id="success" role="alert">
             {{ session('status') }}
         </div>
     @endif
-    <div class="enquiry-title">
-        <h1>Employee</h1>
-    </div>
-    <div class="logo-head">
+   <div class="logo-head">
         <div class="inquiry-header">
             <label for="date"class="inquiry-lable"><img src="assets/img/username-logo.png" alt=""
                     class="inquiry-logo"></label>
@@ -201,4 +205,3 @@
         </div>
     </div>
     @include('layout.footer')
-</div>
