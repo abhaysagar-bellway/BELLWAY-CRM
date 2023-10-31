@@ -15,6 +15,9 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\createUserController;
 use App\Http\Controllers\SettingController;
+use App\Http\Middleware\CheckAuth;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,12 +28,12 @@ use App\Http\Controllers\SettingController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::middleware(['middleware'=> 'web'])->group(function () {
+Route::get('/',[LoginController::class,'AdminLogin']);
+Route::post('/login',[LoginController::class,'logi::classn'])->name('admin.submit');
+Route::middleware(['web',CheckAuth::class])->group(function () {
     
 
-Route::get('/',[LoginController::class,'AdminLogin'])->middleware('route');
-Route::post('/login',[LoginController::class,'login'])->name('admin.submit');
+
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 Route::get('/search-inquiry',[InquiryController::class,'Searchinquiry']);
 Route::post('/search-inquiry-data',[InquiryController::class,'searchInquiryData'])->name('inquiry.search');
