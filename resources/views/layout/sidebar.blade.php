@@ -4,7 +4,8 @@ $sidebarWidth = '';
 $sidebarLogo = '';
 $sidebarPadding = '';
 $backgroundColor = '#E8F5FC';
-$sidebarBackground = 'sidebar-background'
+$sidebarBackground = 'sidebar-background';
+$sidebarHeading = '#000000';
 @endphp
 @if(Request::is('chat'))
 @php
@@ -13,14 +14,21 @@ $sidebarWidth = '50px';
 $sidebarLogo = '20px';
 $sidebarPadding = '50px';
 $sidebarBackground = '';
-$backgroundColor = ''
+$backgroundColor = '';
 @endphp
 @endif
 
 
 @if(Request::is('dashboard'))
+<style>
+  .dropdown-hover:hover{
+    color: #000000 !important;
+  }
+</style>
 @php
-$backgroundColor = '#1B2137'
+$backgroundColor = '#1B2137';
+$sidebarHeading = '#3DFFC1';
+
 @endphp
 @endif
 
@@ -45,7 +53,7 @@ $backgroundColor = '#1B2137'
            <img src="assets/img/bellway-logo.png" alt="" class="logo" style="width: {{$sidebarLogo}}; padding-bottom : {{$sidebarPadding}}">
          </div>
        
-           <h1 class="logo-heading" id="logoHeading" style="color:  #3DFFC1; display: {{$sidebarClass}}">Bellway CRM</h1>
+           <h1 class="logo-heading" id="logoHeading" style="color: {{$sidebarHeading}}; display: {{$sidebarClass}}">Bellway CRM</h1>
        
          <ul class="sidebar-nav" id="sidebar-nav">
        
@@ -58,46 +66,46 @@ $backgroundColor = '#1B2137'
        
            <li class="nav-item">
             <a class="{{$navlink}} collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="" style="color: {{$navLinkColor}}">
-               <i class="bi bi-menu-button-wide"></i><span  style="display: {{$sidebarClass}}">Enquiry</span><i style="display: {{$sidebarClass}}" class="bi bi-chevron-down ms-auto"></i>
+              <i class="bi bi-search"></i><span  style="display: {{$sidebarClass}}">Enquiry</span><i style="display: {{$sidebarClass}}" class="bi bi-chevron-down ms-auto"></i>
              </a>
              <ul id="components-nav" class="nav-content collapse dropdown-scroll" data-bs-parent="#sidebar-nav">
                <li>
-                <a href="{{url('/')}}/search-inquiry" class=" {{$navlink}}"style="color:{{$navLinkColor}}">
+                <a href="{{url('/')}}/search-inquiry" class=" {{$navlink}} dropdown-hover"style="color:{{$navLinkColor}}">
                    <i class="bi bi-circle"></i><span>Search Enquiry</span>
                  </a>
                </li>
                <li>
-                <a href="{{url('/')}}/Addinquiry" class="{{$navlink}}" style="color: {{$navLinkColor}}">
+                <a href="{{url('/')}}/Addinquiry" class="{{$navlink}} dropdown-hover" style="color: {{$navLinkColor}}">
                    <i class="bi bi-circle"></i><span>Add Enquiry</span>
                  </a>
                </li>
                <li>
-                <a href="{{url('/')}}/Newinquiry" class="{{$navlink}}" style="color: {{$navLinkColor}}" >
+                <a href="{{url('/')}}/Newinquiry" class="{{$navlink}} dropdown-hover" style="color: {{$navLinkColor}}" >
                    <i class="bi bi-circle"></i><span>New Enquiry</span>
                  </a>
                </li>
                <li>
-                <a href="{{url('/')}}/ClientDetail" class="{{$navlink}}" style="color: {{$navLinkColor}}">
+                <a href="{{url('/')}}/ClientDetail" class="{{$navlink}} dropdown-hover" style="color: {{$navLinkColor}}">
                    <i class="bi bi-circle"></i><span>Client Details</span>
                  </a>
                </li>
                <li>
-                <a href="{{url('/')}}/proposaldetails" class="{{$navlink}}"style="color: {{$navLinkColor}}">
+                <a href="{{url('/')}}/proposaldetails" class="{{$navlink}} dropdown-hover"style="color: {{$navLinkColor}}">
                   <i class="bi bi-circle " ></i><span>Purposal Details</span>
                 </a>
               </li>
               <li>
-                <a href="{{url('/')}}/pendingFollowup" class="{{$navlink}}" style="color: {{$navLinkColor}}" >
+                <a href="{{url('/')}}/pendingFollowup" class="{{$navlink}} dropdown-hover" style="color: {{$navLinkColor}}" >
                   <i class="bi bi-circle  "></i><span>Pending Follow up</span>
                 </a>
               </li>
               <li>
-                <a href="{{url('/')}}/doneFollowup" class="{{$navlink}}" style="color: {{$navLinkColor}}" >
+                <a href="{{url('/')}}/doneFollowup" class="{{$navlink}} dropdown-hover" style="color: {{$navLinkColor}}" >
                   <i class="bi bi-circle " ></i><span>Done Follow up</span>
                 </a>
               </li>
               <li>
-                <a href="{{url('/')}}/lead" class="{{$navlink}}"style="color: {{$navLinkColor}}">
+                <a href="{{url('/')}}/lead" class="{{$navlink}} dropdown-hover"style="color: {{$navLinkColor}}">
                   <i class="bi bi-circle  " ></i><span>Allocated Leads to me</span>
                 </a>
               </li>
@@ -128,7 +136,7 @@ $backgroundColor = '#1B2137'
          
 
           <a class="{{$navlink}} collapsed" data-bs-target="#createuser" data-bs-toggle="collapse" href="" style="color: {{$navLinkColor}}">
-            <i class="bi bi-person-add"></i><span>Create User</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-person-add"></i><span  style="display: {{$sidebarClass}}">Create User</span><i  style="display: {{$sidebarClass}}" class="bi bi-chevron-down ms-auto"></i>
           </a>
             <ul id="createuser" class="nav-content collapse dropdown-scroll" data-bs-parent="#sidebar-nav">
               <li>
@@ -147,7 +155,7 @@ $backgroundColor = '#1B2137'
         <li class="nav-item">
           <a class="{{$navlink}} collapsed" href="{{url('/')}}"  style="color: {{$navLinkColor}}">
             <i class="bi bi-box-arrow-in-right"></i>
-            <span>Logout</span>
+            <span  style="display: {{$sidebarClass}}">Logout</span>
           </a>
         </li>
        

@@ -62,6 +62,7 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
                   </div>
              </a>
            </li>
@@ -70,6 +71,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
@@ -78,6 +81,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/meeting-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
@@ -86,6 +91,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/oncall-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
@@ -94,6 +101,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/break-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
@@ -102,6 +111,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/lunch-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
@@ -110,6 +121,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
@@ -118,6 +131,8 @@ $sidebarSearch = '#191F33';
                 <div class="sidebar-chat-list">
                     <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
                     <h1 class="sidebar-chat-list-username">Maaz</h1>
+                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+
                   </div>
              </a>
            </li>
