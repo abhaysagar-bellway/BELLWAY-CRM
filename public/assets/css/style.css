@@ -768,6 +768,18 @@ flex-shrink: 0;
   transition: 0.3s;
 }
 
+.sidebar-nav .nav-content-chat-list a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  transition: 0.3;
+  padding: 10px 0 10px 0px;
+  transition: 0.3s;
+}
 .sidebar-nav .nav-content a i {
   font-size: 6px;
   margin-right: 8px;
@@ -2915,7 +2927,7 @@ padding-top: 5px;
   color: black;
 }
 .chat-list-image{
-  width: 40px;
+  width: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2924,7 +2936,7 @@ padding-top: 5px;
 .sidebar-chat-list-username{
   font-size: 16px;
   font-weight: 600;
-  padding-left: 20px;
+  padding-left: 10px;
   }
   .dropdown-chat-scroll{
     max-height:200px;
@@ -3081,16 +3093,17 @@ justify-content: start;
   }
   .message-container-sender{
     
-display: flex;
-flex-direction: row;
-justify-content: end;
-      background-color: #ffffff;
-      border-radius: 5px;
-      padding: 10px;
-      margin: 10px;
-      margin-left: 500px;
-      width:300px;
-      left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 500px;
+    width:300px;
+    left: 0;
+    text-align: right;
 
   }
   .rounded-circle{
@@ -3320,7 +3333,7 @@ table.dataTable thead .sorting_desc_disabled:before {
   flex-direction: row;
 }
 .chat-list-status-icon{
-  margin-left: 80px;
+  margin-left: 0px;
 }
 .header-pagename{
  margin-right: 280px;

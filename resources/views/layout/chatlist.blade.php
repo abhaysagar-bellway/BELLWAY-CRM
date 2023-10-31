@@ -56,86 +56,33 @@ $sidebarSearch = '#191F33';
          <a class="nav-link collapsed" data-bs-target="#components-chat" data-bs-toggle="collapse" href="#">
             <h1 class="sidebar-chat-heading">chat</h1><i class="bi bi-chevron-down ms-auto"></i>
          </a>
-         <ul id="components-chat" class="nav-content collapse dropdown-chat-scroll" data-bs-parent="#sidebar-chat">
-           <li>
+         <ul id="components-chat" class="nav-content-chat-list collapse dropdown-chat-scroll" data-bs-parent="#sidebar-chat">
+          @foreach ($employeeData as $employe)
+          <li>
              <a href="components-alerts.html">
                 <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
-                  </div>
-             </a>
-           </li>
-           <li>
-             <a href="components-accordion.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+                   @php
+                    if($employe->upload_image != '' && $employe->upload_image != null ){
+                      $image = asset('/uploads/') . '/' . $employe->upload_image;
 
+                    }else{
+                      $image = 'assets/icon/profile-icon.png';
+                    }
+                  @endphp
+                    <img src="{{$image}}" alt="" class="chat-list-image">
+                    <h1 class="sidebar-chat-list-username">{{ $employe->first_name }}
+                      {{$employe->last_name}}</h1>
                   </div>
-             </a>
-           </li>
-           <li>
-             <a href="components-badges.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/meeting-icon.png" alt="" class="rounded-circle chat-list-status-icon">
+                  <div>
+                      <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
 
-                  </div>
+                </div>
+ 
+              
              </a>
            </li>
-           <li>
-             <a href="components-breadcrumbs.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/oncall-icon.png" alt="" class="rounded-circle chat-list-status-icon">
-
-                  </div>
-             </a>
-           </li>
-           <li>
-             <a href="components-buttons.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/break-icon.png" alt="" class="rounded-circle chat-list-status-icon">
-
-                  </div>
-             </a>
-           </li>
-           <li>
-             <a href="components-cards.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/lunch-icon.png" alt="" class="rounded-circle chat-list-status-icon">
-
-                  </div>
-             </a>
-           </li>
-           <li>
-             <a href="components-carousel.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
-
-                  </div>
-             </a>
-           </li>
-           <li>
-             <a href="components-list-group.html">
-                <div class="sidebar-chat-list">
-                    <img src="assets/img/profile-img.png" alt="" class="chat-list-image">
-                    <h1 class="sidebar-chat-list-username">Maaz</h1>
-                    <img src="assets/icon/online-icon.png" alt="" class="rounded-circle chat-list-status-icon">
-
-                  </div>
-             </a>
-           </li>
+           @endforeach
+  
         
          </ul>
        </li><!-- End Components Nav -->

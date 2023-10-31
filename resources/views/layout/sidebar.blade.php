@@ -162,7 +162,6 @@ $sidebarHeading = '#3DFFC1';
         </li>
        
          </ul>
-       
-          </aside>
 
-       </div>
+     </aside><!-- End Sidebar-->
+ </div>
