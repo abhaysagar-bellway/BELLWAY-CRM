@@ -51,3 +51,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/todo', [DashboardController::class, 'addTodo']);
 
 Route::get('/role',[createUserController::class,'role']);
+Route::post('/role',[createUserController::class,'addrole']);
