@@ -20,16 +20,16 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+ 
         // print_r($request->all());
         $request->validate(
-            [
-                // 'name' =>  'string|required|min:4|max:10',
+            [                // 'name' =>  'string|required|min:4|max:10',
                 'email' => 'required|email',
                 'password' => 'required|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/' 
             ]
             );
-                
             $credentials = Auth::attempt(['email' => $request->email, 'password' => $request->password]);
+           
             if($credentials){
                 $credentials = $request->only('email', 'password');
 
