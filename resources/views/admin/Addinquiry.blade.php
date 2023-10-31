@@ -189,7 +189,7 @@
         </form>
 
         <table id="dtHorizontalExample" class="table table-striped table-bordered table-sm" cellspacing="0"
-  width="100%">
+       width="100%">
             <thead >
               <tr>
                 <th scope="col">SNo.</th>
