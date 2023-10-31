@@ -17,8 +17,8 @@
       </div>
 
       <div class="card-body pb-20">
-        <h5 class="card-title">200</h5>
-        <h5 class="card-heading">Total Follow up</h5>
+        <h5 class="card-title">599</h5>
+        <h5 class="card-heading">Total Deal Done</h5>
              <canvas id="doughnutChart" style="width:100%;max-width:600px"></canvas>
 
              <script>
@@ -40,13 +40,13 @@
                    backgroundColor: barColors,
                    data: yValues
                  }]
+  
                },
                options: {
                  title: {
                    display: false,
                    text: "World Wide Wine Production 2018"
-                 }
-                 
+                 },
                }
              });
              </script>

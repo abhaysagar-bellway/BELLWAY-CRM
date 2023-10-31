@@ -58,15 +58,18 @@
 
 
         <div class="message-container">
+          <div class="message-received-container">
             <img src="assets/img/profile-img.png" alt="" class="chat-box-message-image">
-          <div class="box">
-            <span class="time-right">11:00</span>
-            <div class="message-box">
-              
-                    <p>Hello. How are you today?</p>
-                 
-                </div>
+            <div class="box">
+              <span class="time-right">11:00</span>
+              <div class="message-box">
+                
+                      <p>Hello. How are you today?</p>
+                   
+                  </div>
+            </div>
           </div>
+    
      
         </div>
         <div class="message-container-sender">
@@ -100,6 +103,7 @@
 </div>
 
 <div style="padding-right: 10px">
+  <i class="bi bi-send"></i>
     <i class="bi bi-paperclip"></i>
     <i class="bi bi-person-vcard"></i>
    </div>

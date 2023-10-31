@@ -1,10 +1,22 @@
-<div class="enquiry-container">
-    @include('layout.header')
-    @include('layout.sidebar')
 
-    <div class="enquiry-title">
-        <h1>Enquiry</h1>
+
+
+    @include('layout.header')
+    <div class="container">
+<div class="row">
+    @include('layout.sidebar')
+ <div class="col-10">
+@include('layout.navbar')
+ </div>
     </div>
+
+</div>
+
+
+
+   
+
+  <div>
     <div class="logo-head">
         <div class="inquiry-header">
             <label for="date"class="inquiry-lable"><img src="assets/img/search-enquiry.png" alt=""
@@ -126,4 +138,4 @@
         </form>
     </div>
     @include('layout.footer')
-</div>
+
