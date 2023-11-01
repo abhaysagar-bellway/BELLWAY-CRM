@@ -17,6 +17,6 @@ class CheckAuth
         }
 
         // User is not authenticated, redirect to the login page
-        return redirect('/login');
+        return redirect('/');
     }
 }
