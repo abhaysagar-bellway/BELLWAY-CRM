@@ -8,9 +8,9 @@
 </div>
 
 </div>
-   
+
    @if ($message = Session::get('status'))
-<div class="alert alert-success alert-block text-center">
+<div class="alert alert-success alert-block">
     <button type="button" class="close" data-dismiss="alert">×</button>    
     <strong>{{ $message }}</strong>
 </div>
@@ -28,7 +28,7 @@
         <form action="{{url('/role')}}" method="POST">
             @csrf
             <div class="enquiry-row row ">
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="name" class="row-text">Role Name</label>
                     <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img
                                 src="assets/img/user.png" alt="" class="form-icon"></label>
@@ -36,7 +36,22 @@
                             id="" aria-describedby="role" placeholder="Enter the role">
                     </div>
 
-                </div>
+                </div> --}}
+                <div class="form-group col-md-6">
+                  <label for="text" class="row-text">Role Name</label>
+                  <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img
+                    src="assets/img/user.png" alt="" class="form-icon"></label>
+                          <select class="form-control input-box-enquiry rectangle" name="rolename" aria-label="Default select example">
+                              <option selected>choose option</option>
+                              <option value="Developer">Developer</option>
+                                <option value="Designer">Designer</option>
+                                <option value="Sales">Sales</option>
+                                <option value="HumanResource">Human Resource</option>
+                                <option value="DigitalMarketing">Digital Marketing</option>
+                                <option value="ProjectCoordinator">Project Coordinator</option>
+                            </select>           
+                  </div>
+              </div>
              <div class="enquiry-title">
                     <h3 id="module-permission" style="margin: 12px">Module Permission</h3>
                 </div>

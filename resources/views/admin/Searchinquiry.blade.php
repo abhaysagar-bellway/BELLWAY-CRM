@@ -76,7 +76,7 @@
                               </select>           
                     </div>
                 </div>
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="text" class="row-text">Assigning</label>
                     <div class="input-inline-inquiry"><label for="assign" class="inquiry-lable"><img
                                 src="assets/img/assigining.png" alt="" class="form-icon"></label>
@@ -84,7 +84,21 @@
                             id="" aria-describedby="" placeholder="Assigning">
                     </div>
 
+                </div> --}}
+
+                <div class="form-group col-md-6">
+                    <label for="text" class="row-text">Assigning </label>
+                    <div class="input-inline-inquiry"><label for="assign" class="inquiry-lable"><img
+                                src="assets/img/assigining.png" alt="" class="form-icon"></label>
+                               
+                            <select class="form-control input-box-enquiry rectangle" name="rolename" aria-label="Default select example">
+                               
+                                <option selected>{{auth()->user()->name}}</option>
+                               
+                              </select>           
+                    </div>
                 </div>
+
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Assigned</label>
                     <div class="input-inline-inquiry"><label for="assign" class="inquiry-lable"><img

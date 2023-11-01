@@ -67,14 +67,19 @@
                     <label for="role" class="row-text">Role</label>
                     <div class="input-inline-inquiry"><label for="role" class="inquiry-lable"><img
                                 src="assets/img/setting.png" alt="image" class="form-icon"></label>
-                                <select class="form-control input-box-enquiry rectangle" name="role" aria-label="Default select example">
+                                <select class="form-control input-box-enquiry rectangle" name="role_id" aria-label="Default select example">
                                     <option selected>choose option</option>
-                                    <option value="Laravel_Developer">Laravel_Developer</option>
-                                      <option value="Flutter_Developer">Flutter_Developer</option>
-                                      <option value="Digital_Marketing">Digital_Marketing</option>
-                                      <option value="Graphic_Designer">Graphic_Designer</option>
-                                      <option value="Business_Development_Executive">Business_Development_Executive</option>
-                                      <option value="Project_Coordinator">Project_Coordinator</option>
+                                   
+                                    @foreach ($role as $roles)
+                                        <option value="{{$roles->id }}">{{$roles->rolename}}</option>
+                                    @endforeach
+                                    
+                                   
+                                    {{--   <option value="2">Flutter Developer</option>
+                                      <option value="3">Digital Marketing</option>
+                                      <option value="4">Graphic Designer</option>
+                                      <option value="5">Business Development_Executive</option>
+                                      <option value="6">Project Coordinator</option> --}}
                                   </select> 
                     </div>
 
@@ -82,7 +87,7 @@
 
                     <div class="input-inline">
                         <span class="text-danger">
-                            @error('role')
+                            @error('role_id')
                                 {{ $message }}
                             @enderror
                         </span>
@@ -92,7 +97,7 @@
                     <label for="number" class="row-text">Mobail Number</label>
                     <div class="input-inline-inquiry"><label for="number" class="inquiry-lable"><img
                                 src="assets/img/call.png" alt="" class="form-icon"></label>
-                        <input type="number" class="form-control input-box-enquiry rectangle" name="number"
+                        <input type="number" class="form-control input-box-enquiry rectangle" name="mobile_number"
                             id="" aria-describedby="" placeholder="Enter the Employee Mobile Number">
                     </div>
 
@@ -144,8 +149,8 @@
                     <label for="" class="row-text">upload Image</label>
                     <div class="input-inline-inquiry"><label for="" class="inquiry-lable"><img
                                 src="assets/img/city.png" alt="" class="form-icon"></label>
-                        <input type="file" class="form-control input-box-enquiry rectangle" name="upload_image"
-                            id="" aria-describedby="" placeholder="Upload Image"
+                        <input type="file" class="form-control input-box-enquiry rectangle" name="profile_photo_path"
+                            id="" aria-describedby="" placeholder="upload profile photo"
                             style="padding: 15px;
                                background-image: linear-gradient(180deg, #3E4768, #1B2137);
                                  color: #ffffff !important;">
@@ -180,22 +185,21 @@
                         <th scope="col">Role</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
-                        {{-- <th scope="col">Password</th> --}}
                         <th scope="col">Profile</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($employeeData as $employees)
+                    @foreach ($userData as  $User )
                         <tr>
-                            <th scope="row">{{ $employees->id }}</th>
-                            <td>{{ $employees->first_name }}</td>
-                            <td>{{ $employees->last_name }}</td>
-                            <td>{{ $employees->role }}</td>
-                            <td>{{ $employees->number }}</td>
-                            <td>{{ $employees->email }}</td>
-                            {{-- <td>{{ $employees->password }}</td> --}}
+                            <th scope="row">{{  $User ->id }}</th>
+                            <td>{{  $User ->first_name }}</td>
+                            <td>{{  $User ->last_name }}</td>
+                            <td>{{  $User ->role }}</td>
+                            <td>{{  $User ->mobile_number }}</td>
+                            <td>{{  $User ->email }}</td>
+                            
                             <td>
-                                <img src="{{ asset('/uploads/') . '/' . $employees->upload_image }}" width="50px"
+                                <img src="{{ asset('/uploads/') . '/' .  $User ->profile_photo_path}}" width="50px"
                                     height="50px" alt="image">
                             </td>
                         </tr>
