@@ -15,7 +15,10 @@ use App\Http\Controllers\ChatController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\createUserController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\LogoutController;
 use App\Http\Middleware\CheckAuth;
+
+
 
 
 /*
@@ -29,10 +32,10 @@ use App\Http\Middleware\CheckAuth;
 |
 */
 Route::get('/',[LoginController::class,'AdminLogin']);
-Route::post('/login',[LoginController::class,'login'])->name('admin.submit');
-Route::middleware(['web',CheckAuth::class])->group(function () {
-    
 
+Route::post('/',[LoginController::class,'login'])->name('admin.submit');
+
+Route::middleware(['web',CheckAuth::class])->group(function () {
 
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 Route::get('/search-inquiry',[InquiryController::class,'Searchinquiry']);
@@ -59,5 +62,8 @@ Route::post('/todo', [DashboardController::class, 'addTodo']);
 
 Route::get('/role',[createUserController::class,'role']);
 Route::post('/role',[createUserController::class,'addrole']);
+Route::get('/logout',[LogoutController::class,'logout'])->name('logout.perform');
+
 
 });
+
