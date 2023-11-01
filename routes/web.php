@@ -29,7 +29,7 @@ use App\Http\Middleware\CheckAuth;
 |
 */
 Route::get('/',[LoginController::class,'AdminLogin']);
-Route::post('/login',[LoginController::class,'logi::classn'])->name('admin.submit');
+Route::post('/login',[LoginController::class,'login'])->name('admin.submit');
 Route::middleware(['web',CheckAuth::class])->group(function () {
     
 
