@@ -49,15 +49,12 @@ Route::get('/lead',[LeadController::class,'lead']);
 Route::get('/chat',[ChatController::class,'chat']);
 Route::get('/setting',[SettingController::class,'setting']);
 Route::get('/createuser',[createUserController::class,'createUser']);
-Route::post('/create-user',[createUserController::class,'employee']);
+Route::post('/create-user',[createUserController::class,'User']);
 
 //Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-
-
 Route::post('/todo', [DashboardController::class, 'addTodo']);
-
 Route::get('/role',[createUserController::class,'role']);
 Route::post('/role',[createUserController::class,'addrole']);
 Route::get('/logout',[LogoutController::class,'logout'])->name('logout.perform');

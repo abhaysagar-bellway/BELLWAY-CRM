@@ -11,4 +11,5 @@ class Useradmin extends Model
 
   protected  $table = "users";
   protected $primarykey  = "id";
+  
 }
