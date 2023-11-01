@@ -32,7 +32,9 @@ use App\Http\Middleware\CheckAuth;
 |
 */
 Route::get('/',[LoginController::class,'AdminLogin']);
+
 Route::post('/',[LoginController::class,'login'])->name('admin.submit');
+
 Route::middleware(['web',CheckAuth::class])->group(function () {
 
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
