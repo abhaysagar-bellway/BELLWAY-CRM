@@ -153,9 +153,9 @@ $sidebarHeading = '#3DFFC1';
               </li>
           </ul>
         </li>
-       
+           
         <li class="nav-item">
-          <a class="{{$navlink}} collapsed" href="{{url('/logout')}}"  style="color: {{$navLinkColor}}">
+          <a class="{{$navlink}} collapsed"  onclick="logout({{auth()->user()->role_id}},{{url('/')}})" style="color: {{$navLinkColor}}">
             <i class="bi bi-box-arrow-in-right"></i>
             <span  style="display: {{$sidebarClass}}">Logout</span>
           </a>

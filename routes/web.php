@@ -31,9 +31,11 @@ use App\Http\Middleware\CheckAuth;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/',[LoginController::class,'AdminLogin']);
+Route::get('/admin',[LoginController::class,'AdminLogin']);
 
-Route::post('/',[LoginController::class,'login'])->name('admin.submit');
+Route::post('/admin',[LoginController::class,'login'])->name('admin.submit');
+Route::get('/',[LoginController::class,'Employee']);
+Route::post('/',[LoginController::class,'EmployeeLogin'])->name('employee.login');
 
 Route::middleware(['web',CheckAuth::class])->group(function () {
 
@@ -52,9 +54,7 @@ Route::get('/chat',[ChatController::class,'chat']);
 Route::get('/setting',[SettingController::class,'setting']);
 Route::get('/createuser',[createUserController::class,'createUser']);
 Route::post('/create-user',[createUserController::class,'User']);
-
 //Auth::routes();
-
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/todo', [DashboardController::class, 'addTodo']);
 Route::get('/role',[createUserController::class,'role']);

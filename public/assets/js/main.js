@@ -319,3 +319,46 @@
   }
 
 })();
+
+function logout($id,baseUrl){
+  swal({
+    title: 'Do you want to logout?',
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonColor: '#FC6A57',
+    cancelButtonColor: '#363636',
+    confirmButtonText: `Yes`,
+    denyButtonTlext: `Don't Logout`,
+    }).then((result) => {
+      
+    if (result.value) {
+      if($id == 1){
+        $.ajax({
+          type: 'POST',
+          url: baseUrl +"/admin",
+          dataType: 'JSON',
+          success: function (results) {
+            location.href = "/admin";         
+         
+          }
+      });
+      }
+      else {
+
+        $.ajax({
+          type: 'POST',
+          url: baseUrl+ "/",
+          dataType: 'JSON',
+          success: function (results) {
+            location.href = "/";         
+         
+          }
+      });
+      }
+    } else{
+      swal('Canceled', '', 'info')
+    }
+    });
+
+  
+}

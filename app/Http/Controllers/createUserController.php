@@ -10,7 +10,7 @@ class createUserController extends Controller
 {
     public function createUser()
     {
-        $userData = User::all();
+        $userData =  User::where('role_id', '!=', 1)->get();
         $role = Role::where('id', '!=', 1)->get();
         return view('admin.createUser',array('userData' => $userData),array('role' => $role));
 
@@ -47,7 +47,7 @@ class createUserController extends Controller
         }
        
         $User->save();
-      dd($User);
+    //   dd($User);
         return redirect()->back()->with('status','User Data Add Successfully!');
 
 

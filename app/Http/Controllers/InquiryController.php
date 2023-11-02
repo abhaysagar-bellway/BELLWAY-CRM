@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\inquiry;
+use App\Models\User;
 
 class InquiryController extends Controller
 {
     public function Searchinquiry(){
-        
-        return view('admin.Searchinquiry');
+        $user = User::where('role_id', '!=', 1)->get();
+        $assigningData = User::where('role_id',1)->get();
+        return view('admin.Searchinquiry',array('user' => $user,'assigningData' => $assigningData));
     }
     public function searchInquiryData(Request $request){
         dd($request->all());

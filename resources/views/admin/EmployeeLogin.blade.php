@@ -55,7 +55,7 @@
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Admin Login</h1>
+            <h1>Employee Login</h1>
     
         </div><!-- End Page Title -->
 
@@ -75,14 +75,14 @@
 
                          @php
                               if(isset($cookieData['email']) && !empty($cookieData['email'])){
-                                 $email = $cookieData['email'];
+                                $EmployeeEmail = $cookieData['email'];
                               } else {
-                                 $email = old('email');
+                                $EmployeeEmail = old('email');
                               }
                              
                          @endphp       
                         <input type="email" class="form-control input-box rectangle" name="email" id=""
-                            aria-describedby="emailHelpId" placeholder="Email Address" value="{{$email}}">
+                            aria-describedby="emailHelpId" placeholder="Email Address" value="{{ $EmployeeEmail}}">
 
                   </div>     
                        <div class="input-inline">
@@ -120,14 +120,14 @@
 
                                 @php
                               if(isset($cookieData['password']) && !empty($cookieData['password'])){
-                                 $password = $cookieData['password'];
+                                $Employeepassword = $cookieData['password'];
                               } else {
-                                 $password = old('password');
+                                $Employeepassword = old('password');
                               }
                              
                          @endphp 
                         <input type="password" class="form-control input-box rectangle" name="password" id=""
-                            aria-describedby="" placeholder="Password" value="{{$password}}" >
+                            aria-describedby="" placeholder="Password" value="{{$Employeepassword}}" >
                        </div> 
                        <div class="input-inline">
                         <span class="text-danger"> 
