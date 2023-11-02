@@ -72,8 +72,7 @@
                                    
                                     @foreach ($role as $roles)
                                         <option value="{{$roles->id }}">{{$roles->rolename}}</option>
-                                    @endforeach
-                                    
+                                    @endforeach 
                                    
                                     {{--   <option value="2">Flutter Developer</option>
                                       <option value="3">Digital Marketing</option>
@@ -194,7 +193,7 @@
                             <th scope="row">{{  $User ->id }}</th>
                             <td>{{  $User ->first_name }}</td>
                             <td>{{  $User ->last_name }}</td>
-                            <td>{{  $User ->role }}</td>
+                            <td>{{  $User ->role_id }}</td>
                             <td>{{  $User ->mobile_number }}</td>
                             <td>{{  $User ->email }}</td>
                             

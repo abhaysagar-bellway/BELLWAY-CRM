@@ -56,10 +56,62 @@ class LoginController extends Controller
             } else {
                return redirect()->back()->with('error','Invalid Login details');
             }
-             return redirect("/")->withSuccess('Login details are not valid');
+             return redirect("/admin")->withSuccess('Login details are not valid');
     
     }
 
-   
+    public function Employee()
+    {
+    //    $name = Cookie::get('name');
+       $EmployeeEmail = Cookie::get('email');
+       $Employeepassword = Cookie::get('password');
+       $cookieData = array('email' =>$EmployeeEmail, 'password' => $Employeepassword);
+        return view('admin.EmployeeLogin',array('cookieData' => $cookieData));
+        
+    }
 
+
+    public function EmployeeLogin(Request $request)
+    {
+ 
+        // print_r($request->all());
+        $validation =  $request->validate(
+            [            
+                
+                'email' => 'required|email',
+                'password' => 'required|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/' 
+            ]
+            );
+            $credentials = Auth::attempt(['email' =>  $validation[$request->email], 'password' =>  $validation[$request->password]]);
+           
+            if($credentials){
+                $credentials = $request->only('email', 'password');
+            if (Auth::attempt($credentials)) {
+                return redirect()->intended('dashboard')
+                            ->withSuccess('Signed in');
+
+                            //set cookies click on remember
+                            if(isset($cookieData['checkbox']) && !empty($cookieData['checkbox'])){
+                                setcookie("email",$cookieData['email'],time()+3600);
+                                // setcookie("name",$cookieData['name'],time()+3600);
+                                setcookie("password",$cookieData['password'],time()+3600);
+                                setcookie("remember_me",1,time()+3600);
+                            }
+                            else{
+                                setcookie('email',"");
+                                // setcookie('name',"");
+                                setcookie('password',"");
+                                setcookie('remember_me',"");
+                            }
+            }
+            else
+              {
+               return redirect()->back()->with('error','Invalid Login details');
+            }
+            }
+             
+             return redirect("/")->withSuccess('Employee Your Login details are not valid');
+    
+    }
+    
 }

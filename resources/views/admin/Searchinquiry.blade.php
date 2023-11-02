@@ -91,9 +91,10 @@
                     <div class="input-inline-inquiry"><label for="assign" class="inquiry-lable"><img
                                 src="assets/img/assigining.png" alt="" class="form-icon"></label>
                                
-                            <select class="form-control input-box-enquiry rectangle" name="rolename" aria-label="Default select example">
-                               
-                                <option selected>{{auth()->user()->name}}</option>
+                            <select class="form-control input-box-enquiry rectangle" name="rolename" aria-label="Default select example"> 
+                                @foreach ($assigningData as $request)                                                                                  
+                                          <option value="">{{$request->first_name}}</option>  
+                                    @endforeach
                                
                               </select>           
                     </div>
@@ -103,8 +104,14 @@
                     <label for="text" class="row-text">Assigned</label>
                     <div class="input-inline-inquiry"><label for="assign" class="inquiry-lable"><img
                                 src="assets/img/assigned.png" alt="" class="form-icon"></label>
-                        <input type="name" class="form-control input-box-enquiry rectangle" name="assigned"
-                            id="" aria-describedby="" placeholder="Assigned">
+                                <select class="form-control input-box-enquiry rectangle" name="sector" aria-label="Default select example">
+                                    <option selected>choose option</option>
+                                    @foreach ($user as $users)
+                                        <option value="">{{$users->first_name ." ".$users->last_name}}</option>
+                                    @endforeach
+                                    
+                                     
+                                  </select> 
                     </div>
 
                 </div>
