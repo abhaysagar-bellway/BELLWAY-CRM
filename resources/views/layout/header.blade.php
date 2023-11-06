@@ -69,6 +69,10 @@ $dashboardColorClass = 'dashboard-background';
 
 <body class="{{$dashboardColorClass}}" >
 
+  <script>
+    var baseUrl = "{{ url('/') }}";
+
+</script>
 <div class="container">
     <div class="row">
 

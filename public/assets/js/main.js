@@ -320,7 +320,9 @@
 
 })();
 
-function logout($id,baseUrl){
+//logout function admin 
+
+function logout($id){
   swal({
     title: 'Do you want to logout?',
     showDenyButton: true,
@@ -329,36 +331,43 @@ function logout($id,baseUrl){
     cancelButtonColor: '#363636',
     confirmButtonText: `Yes`,
     denyButtonTlext: `Don't Logout`,
-    }).then((result) => {
+    }).then((results) => {
       
     if (result.value) {
       if($id == 1){
         $.ajax({
           type: 'POST',
-          url: baseUrl +"/admin",
+           url: baseUrl +"logout",
           dataType: 'JSON',
           success: function (results) {
-            location.href = "/admin";         
-         
-          }
-      });
-      }
-      else {
-
-        $.ajax({
-          type: 'POST',
-          url: baseUrl+ "/",
-          dataType: 'JSON',
-          success: function (results) {
-            location.href = "/";         
-         
+            location.href = "/logout";         
           }
       });
       }
     } else{
-      swal('Canceled', '', 'info')
+      swal("Cancelled", "Your imaginary file is safe :)", "error");
     }
     });
 
   
 }
+
+$('button').click(function(){
+  
+  swal({
+  title: 'Are you sure?',
+  text: "It will permanently deleted !",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then(function() {
+  swal(
+    'Deleted!',
+    'Your file has been deleted.',
+    'success'
+  );
+})
+  
+})
