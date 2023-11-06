@@ -42,7 +42,7 @@
 <div class="sidebar-logo">
     <img src="assets/img/bellway-logo.png" alt="" class="logo">
   </div>
-
+  
 
         <h1 class="logo-heading">Bellway Infotech</h1>
 
@@ -50,7 +50,10 @@
       <img src="assets/img/login-page-img.png" alt="" class="login-page-img">
     </div>
 
-  </aside><!-- End Sidebar-->
+  </aside>
+ 
+  
+  <!-- End Sidebar--> 
 
     <main id="main" class="main">
 
