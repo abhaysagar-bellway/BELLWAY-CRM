@@ -726,6 +726,7 @@ flex-shrink: 0;
 
 .sidebar-nav .nav-link.collapsed {
   color: #ffffff;
+  cursor: pointer;
   /* background: #fff; */
 }
 

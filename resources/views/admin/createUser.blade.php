@@ -72,8 +72,7 @@
                                    
                                     @foreach ($role as $roles)
                                         <option value="{{$roles->id }}">{{$roles->rolename}}</option>
-                                    @endforeach 
-                                   
+                                    @endforeach  
                                     {{--   <option value="2">Flutter Developer</option>
                                       <option value="3">Digital Marketing</option>
                                       <option value="4">Graphic Designer</option>

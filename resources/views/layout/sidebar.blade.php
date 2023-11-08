@@ -38,7 +38,7 @@ $sidebarHeading = '#3DFFC1';
           $navlink = 'nav-link';
           $navLinkColor = '';
        @endphp
-     @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role'))
+     @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role')||Request::is('profile')||Request::is('edit'))
         @php
           $dashboardColorClass = '';
           $navLinkColor = '#444444';
@@ -157,7 +157,7 @@ $sidebarHeading = '#3DFFC1';
         <li class="nav-item">
           <a class="{{$navlink}} collapsed"  onclick="logout({{auth()->user()->role_id}})" style="color: {{$navLinkColor}}">
             <i class="bi bi-box-arrow-in-right"></i>
-            <span  style="display: {{$sidebarClass}}">Logout</span>
+            <span  style="display: {{$sidebarClass}}" style="cursor: pointer">Logout</span>
           </a>
         </li>
        
