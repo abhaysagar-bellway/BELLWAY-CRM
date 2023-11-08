@@ -21,6 +21,7 @@
         "vue": "^3.2.36"
     },
     "dependencies": {
+        "flatpickr": "^4.6.13",
         "vue-loader": "^17.3.0"
     }
 }

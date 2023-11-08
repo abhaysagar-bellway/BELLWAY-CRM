@@ -9,7 +9,8 @@
   <title>Dashboard</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <!-- Flatpickr Calander--> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <!-- Favicons -->
   <link href="http://127.0.0.1:8000/assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -59,7 +60,7 @@
 $dashboardColorClass = 'dashboard-background';
 @endphp
 
-@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role'))
+@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role')||Request::is('profile')||Request::is('edit'))
 @php
    $dashboardColorClass = '';
 @endphp

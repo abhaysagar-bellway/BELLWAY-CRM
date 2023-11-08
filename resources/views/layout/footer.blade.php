@@ -1,6 +1,16 @@
 
 </div>
 </div>
+
+{{--!! flatpickr Calander !!--}}
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr('#datepicker', {
+            dateFormat: 'Y-m-d',
+            allowInput: true,
+        });
+    </script>
+
 <script>
     $(document).ready(function () {
   $('#dtHorizontalExample').DataTable({

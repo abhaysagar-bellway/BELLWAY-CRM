@@ -25,7 +25,7 @@ $dashboardOnlineIcon = 'chat-online-icon';
 
 
 
-@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting'))
+@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting')||Request::is('profile')||Request::is('edit'))
 @php
 $navbarBackground = '#1B2137';
 $navbarInputBackground = '#FFFFFF1F';
@@ -238,7 +238,7 @@ $displayPageName = 'none';
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow  profile">
                
                   <li>
-                    <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                    <a class="dropdown-item d-flex align-items-center" href="{{ url('/') }}/profile">
                       <i class="bi bi-person profile-dropdown-icon"></i>
                       <span>My Profile</span>
                     </a>

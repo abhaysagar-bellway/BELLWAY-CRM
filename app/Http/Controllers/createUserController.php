@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
 
+
 class createUserController extends Controller
 {
     public function createUser()
     {
-        $userData =  User::where('role_id', '!=', 1)->get();
+        $userData =  User::where('role_id', '!=', 1)->get();  
         $role = Role::where('id', '!=', 1)->get();
-        return view('admin.createUser',array('userData' => $userData),array('role' => $role));
+        return view('admin.createUser',array('userData' => $userData,'role' => $role));
 
     }
   
@@ -54,27 +55,6 @@ class createUserController extends Controller
          
     }
 
-    public function role(){
-        $role = Role::all();
-        return view('admin.role',array('role' => $role));
-    }
-
-    public function addrole(Request $request)
-    {
-        $validatedData = $request->validate([
-            'rolename' => 'required|min:4',
-            'checkbox' => 'required',
-         ]);
-
-         $role = new Role;
-         $role->rolename = $request->rolename;   
-         $role->checkbox =  implode(" ,",$request->checkbox);
-         
-         
-         $role->save();
-         return redirect()->back()->with('status','Role Data Add Successfully!');
-
-    }
     
        
 }

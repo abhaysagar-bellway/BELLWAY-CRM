@@ -16,7 +16,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\createUserController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RoleController;
 use App\Http\Middleware\CheckAuth;
+
 
 
 
@@ -57,8 +60,9 @@ Route::post('/create-user',[createUserController::class,'User']);
 //Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/todo', [DashboardController::class, 'addTodo']);
-Route::get('/role',[createUserController::class,'role']);
-Route::post('/role',[createUserController::class,'addrole']);
+Route::get('/role',[RoleController::class,'role']);
+Route::post('/role',[RoleController::class,'addrole']);
+Route::get('/profile',[ProfileController::class,'profile']);
 Route::get('/logout',[LogoutController::class,'logout'])->name('logout.perform');
 
 

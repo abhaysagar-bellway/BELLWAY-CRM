@@ -32,22 +32,24 @@
             @csrf
             <div class="enquiry-row row ">
                 <div class="form-group col-md-6">
-                    <label for="text" class="row-text">Start Date</label>
-                    <div class="input-inline-inquiry"><label for="date" class="inquiry-lable"><img
-                                src="assets/img/date-logo.png" alt="" class="form-icon"></label>
-                        <input type="date" class="form-control input-box-enquiry rectangle" name="start"
-                            id="" aria-describedby="date" placeholder="start Date">
+                    <label for="date" class="row-text">Start Date</label>
+                    <div class="input-inline-inquiry" id="date">
+                        <div class="inquiry-label">
+                            <img id="dateIcon" src="assets/img/date-logo.png" alt="" class="form-icon">
+                        </div>
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="start"
+                            id="datepicker" placeholder="Select a start date : YYYY-MM-DD">
                     </div>
-
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="text" class="row-text">End Date</label>
-                    <div class="input-inline-inquiry"><label for="date" class="inquiry-lable"><img
-                                src="assets/img/date-logo.png" alt="" class="form-icon"></label>
-                        <input type="date" class="form-control input-box-enquiry rectangle" name="end"
-                            id="" aria-describedby="date" placeholder="End Date">
+                    <label for="date" class="row-text">End Date</label>
+                    <div class="input-inline-inquiry" id="date">
+                        <div class="inquiry-label">
+                            <img id="dateIcon" src="assets/img/date-logo.png" alt="" class="form-icon">
+                        </div>
+                        <input type="text" class="form-control input-box-enquiry rectangle" name=""
+                            id="datepicker" placeholder="Select a end date : YYYY-MM-DD">
                     </div>
-
                 </div>
 
                 <div class="form-group col-md-6">

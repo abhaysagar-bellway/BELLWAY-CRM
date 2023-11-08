@@ -16,9 +16,11 @@
             <h3 id="inquiry-header">Add Enquiry</h3>
         </div>
     </div>
-
+        @if (session('error'))
+                <span class="text-danger text-center">{{session('error')}}</span>
+            @endif
     <div class="enquiry-container">
-
+        
         <form action="{{url('/')}}/Addinquiry" method="POST">
             @csrf
             <div class="enquiry-row row ">
@@ -30,14 +32,28 @@
                             id="" aria-describedby="date" placeholder="Enter the Company Name">
                     </div>
 
+               
+                <div class="input-inline">
+                    <span class="text-danger">
+                        @error('company_name')
+                            {{ $message }}
+                        @enderror
+                    </span>
                 </div>
-
+            </div>
                 <div class="form-group col-md-6">
                     <label for="name" class="row-text">City</label>
                     <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img
                                 src="assets/img/city.png" alt="" class="form-icon"></label>
                         <input type="name" class="form-control input-box-enquiry rectangle" name="city"
                             id="" aria-describedby="" placeholder="City">
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('city')
+                                {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
@@ -46,6 +62,13 @@
                                 src="assets/img/call.png" alt="" class="form-icon"></label>
                         <input type="number" class="form-control input-box-enquiry rectangle" name="contact_number"
                             id="" aria-describedby="date" placeholder="Contact Number">
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('contact_number')
+                                {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                 </div>
 
@@ -60,7 +83,13 @@
                                   </select>  
                                
                     </div>
-
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('domain')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -69,6 +98,13 @@
                                 src="assets/img/email-logo.png" alt="" class="form-icon"></label>
                         <input type="email" class="form-control input-box-enquiry rectangle" name="email"
                             id="" aria-describedby="" placeholder="Email ID ">
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('email')
+                                {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                 </div>
 
@@ -90,6 +126,13 @@
                                   <option value="Milk Production /Dairy">Milk Production /Dairy</option>
                               </select>           
                     </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('sector')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
 
                 
@@ -101,17 +144,33 @@
                         <input type="number" class="form-control input-box-enquiry rectangle" name="alternativenumber"
                             id="" aria-describedby="" placeholder="Alternative Number">
                     </div>
-
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('alternativenumber')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="date" class="row-text">Enquiry Date</label>
-                    <div class="input-inline-inquiry"><label for="date" class="inquiry-lable"><img
-                                src="assets/img/date-logo.png" alt="" class="form-icon"></label>
-                        <input type="date" class="form-control input-box-enquiry rectangle" name="enquirydate"
-                            id="" aria-describedby="" placeholder="Enquiry Date">
-                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="date" class="row-text">Enquiry Date</label>
+                        <div class="input-inline-inquiry" id="date">
+                            <div class="inquiry-label">
+                                <img src="assets/img/date-logo.png" alt="" class="form-icon">
+                            </div>
+                            <input type="text" class="form-control input-box-enquiry rectangle" name="enquirydate"
+                                id="datepicker" placeholder="Enquiry Date : YYYY-MM-DD">
+                        </div>
+                    
 
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('enquirydate')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -120,6 +179,13 @@
                                 src="assets/img/alternativemail.png" alt="" class="form-icon"></label>
                         <input type="email" class="form-control input-box-enquiry rectangle" name="alternativeemail"
                             id="" aria-describedby="" placeholder="Alternative Email ID ">
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('alternativeemail')
+                                {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                 </div>
 
@@ -130,7 +196,13 @@
                         <input type="text" class="form-control input-box-enquiry rectangle" name="publicity_medium"
                             id="" aria-describedby="" placeholder="Publicity Medium">
                     </div>
-
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('publicity_medium')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
 
                 <div class="form-group col-md-6">
@@ -140,7 +212,13 @@
                         <input type="address" class="form-control input-box-enquiry rectangle" name="address"
                             id="" aria-describedby="" placeholder="Address">
                     </div>
-
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('address')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Customer Answere</label>
@@ -149,7 +227,13 @@
                         <input type="text" class="form-control input-box-enquiry rectangle" name="customer_answere"
                             id="" aria-describedby="" placeholder="Customer Answere">
                     </div>
-
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('customer_answere')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>        
                 <div class="form-group col-md-6">
                     <label for="state" class="row-text">State</label>
@@ -158,7 +242,13 @@
                         <input type="state" class="form-control input-box-enquiry rectangle" name="state"
                             id="" aria-describedby="" placeholder="State">
                     </div>
-
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('state')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Remarks</label>
@@ -166,6 +256,13 @@
                                 src="assets/img/remarks.png" alt="" class="form-icon"></label>
                         <input type="text" class="form-control input-box-enquiry rectangle" name="remarks"
                             id="" aria-describedby="" placeholder="Remarks">
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('remarks')
+                                {{ $message }}
+                            @enderror
+                        </span>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
