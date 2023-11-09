@@ -69,6 +69,11 @@
             @if (session('error'))
                 <span class="text-danger text-center">{{session('error')}}</span>
             @endif
+            @if (session('status'))
+            <div class="alert alert-success success" id="success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
             <div class="login-form">
                 <form action="{{url('/')}}/login" method="POST">
                     @csrf

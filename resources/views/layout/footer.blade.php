@@ -2,6 +2,17 @@
 </div>
 </div>
 
+<script>
+  // alert message show using settimeout function
+//   document.getElementById('success') ="<div class='alert alert-success success' id='success' role='alert'> {{ session('status') }}</div>"; 
+// setTimeout(function() {document.getElementById('success');},5000);
+
+$("document").ready( function (){
+  setTimeout(() => {
+    $("div.success").remove();
+  }, 3000);
+})
+</script>
 {{--!! flatpickr Calander !!--}}
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>

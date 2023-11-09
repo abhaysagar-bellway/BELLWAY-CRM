@@ -9,12 +9,7 @@
 
 </div>
 
-@if ($message = Session::get('status'))
-    <div class="alert alert-success alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $message }}</strong>
-    </div>
-@endif
+
 
 <div class="logo-head">
     <div class="inquiry-header">
@@ -23,12 +18,17 @@
         <h3 id="inquiry-header">Employee Role</h3>
     </div>
 </div>
-
+@if ($message = Session::get('status'))
+    <div class="alert alert-success alert-block">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>{{ $message }}</strong>
+    </div>
+@endif
 <div class="enquiry-container">
     <form action="{{ url('/role') }}" method="POST">
         @csrf
         <div class="enquiry-row row ">
-            <div class="form-group col-md-6">
+            {{-- <div class="form-group col-md-6">
                 <label for="name" class="row-text">Employee Name</label>
                 <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img
                             src="assets/img/user.png" alt="" class="form-icon"></label>
@@ -36,7 +36,7 @@
                         id="" aria-describedby="role" placeholder="Enter the role">
                 </div>
 
-            </div>
+            </div> --}}
             <div class="form-group col-md-6">
                 <label for="text" class="row-text">Role Name</label>
                 <div class="input-inline-inquiry"><label for="name" class="inquiry-lable"><img

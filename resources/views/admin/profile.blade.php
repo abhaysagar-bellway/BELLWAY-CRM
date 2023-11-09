@@ -8,11 +8,7 @@
 </div>
 
 </div>
-    @if (session('status'))
-        <div class="alert alert-success text-center success" id="success" role="alert">
-            {{ session('status') }}
-        </div>
-    @endif
+  
    <div class="logo-head">
         <div class="inquiry-header">
             <label for="date"class="inquiry-lable"><img src="assets/img/username-logo.png" alt=""
@@ -20,6 +16,11 @@
             <h3 id="inquiry-header">Create Employee</h3>
         </div>
     </div>
+      @if (session('status'))
+        <div class="alert alert-success text-center success" id="success" role="alert">
+            {{ session('status') }}
+        </div>
+    @endif
     @if (session('error'))
         <span class="text-danger text-center">{{ session('error') }}</span>
     @endif
