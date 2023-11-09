@@ -8,11 +8,7 @@
 </div>
 
 </div>
-    @if (session('status'))
-        <div class="alert alert-success text-center success" id="success" role="alert">
-            {{ session('status') }}
-        </div>
-    @endif
+   
    <div class="logo-head">
         <div class="inquiry-header">
             <label for="date"class="inquiry-lable"><img src="assets/img/username-logo.png" alt=""
@@ -20,9 +16,17 @@
             <h3 id="inquiry-header">Create Employee</h3>
         </div>
     </div>
+   
+     @if (session('status'))
+        <div class="alert alert-success success" id="success" role="alert">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            {{ session('status') }}
+        </div>
+    @endif
     @if (session('error'))
         <span class="text-danger text-center">{{ session('error') }}</span>
     @endif
+       
     <div class="enquiry-container">
 
         <form action="{{ url('/') }}/create-user" method="POST" enctype="multipart/form-data">
@@ -144,24 +148,23 @@
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="" class="row-text">upload Image</label>
-                    <div class="input-inline-inquiry"><label for="" class="inquiry-lable"><img
-                                src="assets/img/city.png" alt="" class="form-icon"></label>
-                        <input type="file" class="form-control input-box-enquiry rectangle" name="profile_photo_path"
-                            id="" aria-describedby="" placeholder="upload profile photo"
-                            style="padding: 15px;
-                               background-image: linear-gradient(180deg, #3E4768, #1B2137);
-                                 color: #ffffff !important;">
+                    <label for="" class="row-text">Upload Image</label>
+                    <div class="input-inline-inquiry">
+                        <label for="" class="inquiry-lable">
+                            <img src="assets/img/city.png" alt="" class="form-icon">
+                        </label>
+                        <input type="file" class="form-control input-box-enquiry rectangle" name="profile_photo_path" placeholder="Upload Profile Photo" style="padding: 15px; background-image: linear-gradient(180deg, #3E4768, #1B2137); color: #ffffff !important;">
                     </div>
-
+                
                     <div class="input-inline">
                         <span class="text-danger">
-                            @error('upload_image')
+                            @error('profile_photo_path')
                                 {{ $message }}
                             @enderror
                         </span>
                     </div>
                 </div>
+                
                 <div class="form-group col-md-6">
                     <div class="submit-inquiry">
                         <label for="text" class="row-text"></label>
@@ -195,9 +198,8 @@
                             <td>{{  $User ->role_id }}</td>
                             <td>{{  $User ->mobile_number }}</td>
                             <td>{{  $User ->email }}</td>
-                            
                             <td>
-                                <img src="{{ asset('/uploads/') . '/' .  $User ->profile_photo_path}}" width="50px"
+                                <img src="{{ asset('BELLWAY-CRM/public/uploads') . '/' .  $User ->profile_photo_path}}" width="50px"
                                     height="50px" alt="image">
                             </td>
                         </tr>

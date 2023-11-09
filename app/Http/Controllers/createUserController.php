@@ -42,13 +42,19 @@ class createUserController extends Controller
       
         if (request()->hasFile('profile_photo_path')){
             $file = $request->file('profile_photo_path');
-           $destinationPath = 'uploads';
+            $destinationPath = 'uploads';
             $file->move($destinationPath, $file->getClientOriginalName());
-            $User->profile_photo_path = $file->getClientOriginalName();
+            $User->profile_photo_path = $file->getClientOriginalName();    
         }
+        // if ($request->hasFile('profile_photo_path')) {
+        //     $Path = $request->file('profile_photo_path')->store('profile_photos', 'public');
+        //     $destinationPath = 'uploads';
+        //     $file->move($destinationPath, $file->getClientOriginalName());
+        //     $User->profile_photo_path = $file->getClientOriginalName();
+            
+        // }
        
         $User->save();
-    //   dd($User);
         return redirect()->back()->with('status','User Data Add Successfully!');
 
 

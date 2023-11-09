@@ -3155,7 +3155,7 @@ justify-content: start;
 }
 
 .input-box-enquiry {
-  height: 45px;
+  height: 42px;
   width: 350px;
   border-radius: 0%;
   border-color: #00000040;
@@ -3271,7 +3271,7 @@ input[type=file] {
 }
 
 select.form-control:not([size]):not([multiple]) {
-  height: calc(4.25rem + 2px);
+  height: calc(4.0rem + 2px);
 }
 
 select option {
@@ -3347,4 +3347,11 @@ table.dataTable thead .sorting_desc_disabled:before {
 .message-received-container{
   display: flex;
   flex-direction: row;
+}
+
+#success
+{
+  width: 351px;
+  text-align: center;
+  margin-left: 468px;
 }

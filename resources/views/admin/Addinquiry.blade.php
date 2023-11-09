@@ -16,6 +16,11 @@
             <h3 id="inquiry-header">Add Enquiry</h3>
         </div>
     </div>
+    @if (session('status'))
+    <div class="alert alert-success success" id="success" role="alert">
+        {{ session('status') }}
+    </div>
+@endif
         @if (session('error'))
                 <span class="text-danger text-center">{{session('error')}}</span>
             @endif
