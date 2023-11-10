@@ -322,37 +322,57 @@
 
 //logout function admin 
 
-function logout($id){
-  swal({
-    title: 'Do you want to logout?',
-    showDenyButton: true,
-    showCancelButton: true,
-    confirmButtonColor: '#FC6A57',
-    cancelButtonColor: '#363636',
-    confirmButtonText: `Yes`,
-    denyButtonTlext: `Don't Logout`,
-    }).then((results) => {
-      
-    if (result.value) {
-      if($id == 1){
-        $.ajax({
-          type: 'POST',
-           url: baseUrl +"logout",
-          dataType: 'JSON',
-          success: function (results) {
-            location.href = "/logout";         
-          }
-      });
-      }
-    } else{
-      swal("Cancelled", "Your imaginary file is safe :)", "error");
-    }
-    });
+// function logout() {
+//   swal({
+//     title: 'Do you want to logout?',
+//     showDenyButton: true,
+//     showCancelButton: true,
+//     confirmButtonColor: '#FC6A57',
+//     cancelButtonColor: '#363636',
+//     confirmButtonText: `Yes`,
+//     denyButtonText: `Don't Logout`,
+//   }).then((results) => {
+//     if (results.value) {  
+//         $.ajax({
+//           type: 'POST',
+//           url: baseUrl + "logout",
+//           dataType: 'JSON',
+//           success: function() {
+//             swal("Logged Out", "You have been logged out.", "success").then(() => {
+//               window.location.href = "/logout";
+//             });
+//           }
+//         });
+//       }
+//     // } 
+//     else {
+//       swal("Cancelled", "You are not logged out!", "error");
+//     }
+//   });
+// }
 
+document.addEventListener('DOMContentLoaded', function() {
+  // Find the logout button
+  var logoutButton = document.getElementById('logoutButton');
   
-}
-
-
-
-
+  // Add click event listener
+  logoutButton.addEventListener('click', function() {
+    // Display SweetAlert confirmation box
+    Swal.fire({
+      title: 'Are you sure you want to logout?',
+      text: "You will be redirected to the login page",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Logout',
+      cancelButtonText: 'Cancel'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // If the user confirms the logout, redirect to the login page
+        window.location.href = "/logout";
+      }
+    })
+  });
+});
 

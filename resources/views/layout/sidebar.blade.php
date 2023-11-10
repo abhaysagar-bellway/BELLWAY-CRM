@@ -155,9 +155,9 @@ $sidebarHeading = '#3DFFC1';
         </li>
            
         <li class="nav-item">
-          <a class="{{$navlink}} collapsed"  onclick="logout({{auth()->user()->role_id}})" style="color: {{$navLinkColor}}">
+          <a class="{{$navlink}} collapsed"  onclick="logout({{auth()->user()->role_id}})" style="color: {{$navLinkColor}}" id="logoutButton">
             <i class="bi bi-box-arrow-in-right"></i>
-            <span  style="display: {{$sidebarClass}}" style="cursor: pointer">Logout</span>
+            <span  style="display: {{$sidebarClass}}" id="logoutButton" style="cursor: pointer">Logout</span>
           </a>
         </li>
        
@@ -165,3 +165,4 @@ $sidebarHeading = '#3DFFC1';
 
      </aside><!-- End Sidebar-->
  </div>
+ {{-- <script src="{{ asset('js/main.js') }}"></script> --}}

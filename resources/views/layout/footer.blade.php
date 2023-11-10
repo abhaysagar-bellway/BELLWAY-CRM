@@ -2,6 +2,12 @@
 </div>
 </div>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@9">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+@yield('content')
+
+<script src="{{ asset('js/main.js') }}"></script>
 <script>
   // alert message show using settimeout function
 //   document.getElementById('success') ="<div class='alert alert-success success' id='success' role='alert'> {{ session('status') }}</div>"; 
