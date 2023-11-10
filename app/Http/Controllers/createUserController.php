@@ -23,10 +23,10 @@ class createUserController extends Controller
        
       $validatedData = $request->validate([
             'first_name' => 'required|min:3|max:20',
-            'last_name' => 'required|min:3|max:20',
+            'last_name' => 'required|min:3|max:20|unique:users',
             'role_id' => 'required',
             'mobile_number' => 'required|regex:/^(\+\d{1,3}[- ]?)?\d{10}$/',
-            'email' => 'required|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,8}$/ix',
+            'email' =>'required|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,8}$/ix',
             'password' => 'required|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/',
             'profile_photo_path' => 'required|mimes:png,jpg,jpeg|max:2048',
          ]);
