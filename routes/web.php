@@ -57,6 +57,13 @@ Route::get('/chat',[ChatController::class,'chat']);
 Route::get('/setting',[SettingController::class,'setting']);
 Route::get('/createuser',[createUserController::class,'createUser']);
 Route::post('/create-user',[createUserController::class,'User']);
+
+// graph leade
+// Route::get('/Lead',[LeadController::class,'getLeadData']);
+
+// Route::get('/chart', [LeadController::class, 'index']);
+Route::get('/lead/data', [LeadController::class, 'getData']);
+
 //Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/todo', [DashboardController::class, 'addTodo']);

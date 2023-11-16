@@ -1,10 +1,10 @@
 
 <div class="col-12">
-  <section class="section dashboard">
+  <section class="section dashboard" >
 
 
     <!-- todo -->
-    <div class="card" style="width: 300px">
+    <div class="card" style="width: 300px;">
       <div class="filter">
         <button type="button" class="btn icon" style="background-color: #1B2137" data-toggle="modal" data-target="#exampleModal">
             <i class="bi bi-plus-square"></i> Add New

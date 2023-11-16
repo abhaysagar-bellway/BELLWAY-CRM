@@ -1,5 +1,5 @@
 <div class="col-12">
-    <section class="section dashboard">
+    <section class="section dashboard" >
 
 
         <!-- todo -->
