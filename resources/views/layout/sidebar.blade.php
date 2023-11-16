@@ -32,7 +32,7 @@ $sidebarHeading = '#3DFFC1';
 @endphp
 @endif
 
-    <div class="col-2" style="width: 20%; ">
+    <div class="col-2" style="width: 15%; ">
       @php
           $dashboardColorClass = 'dashboard-color';
           $navlink = 'nav-link';

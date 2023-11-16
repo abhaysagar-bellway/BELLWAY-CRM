@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie; 
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use App\Models\Role;
 
 class LoginController extends Controller
 {
@@ -53,7 +55,10 @@ class LoginController extends Controller
                                 setcookie('remember_me',"");
                             }
             }
-            } else {
+               
+             
+        }        
+             else {
                return redirect()->back()->with('error','Invalid Login details');
             }
              return redirect("/admin")->withSuccess('Login details are not valid');
@@ -104,6 +109,7 @@ class LoginController extends Controller
                                 setcookie('remember_me',"");
                             }
             }
+          
             else
               {
                return redirect()->back()->with('error','Invalid Login details');
