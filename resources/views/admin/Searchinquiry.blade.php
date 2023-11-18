@@ -19,7 +19,7 @@
 
     <div class="enquiry-container">
 
-        <form action="{{ url('/search-inquiry-data') }}" method="POST">
+        <form action="{{ route('search') }}" method="GET">
             @csrf
             <div class="enquiry-row row ">
                 <div class="form-group col-md-6">
@@ -28,7 +28,7 @@
                         <div class="inquiry-label">
                             <img id="dateIcon" src="assets/img/date-logo.png" alt="" class="form-icon">
                         </div>
-                        <input type="text" class="form-control input-box-enquiry rectangle" name="start"
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="start_date"
                             id="datepicker" placeholder="Select a start date : YYYY-MM-DD">
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         <div class="inquiry-label">
                             <img id="dateIcon" src="assets/img/date-logo.png" alt="" class="form-icon">
                         </div>
-                        <input type="text" class="form-control input-box-enquiry rectangle" name=""
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="end_date"
                             id="datepicker" placeholder="Select a end date : YYYY-MM-DD">
                     </div>
                 </div>

@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="path-to/node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css" />
+
 <div class="col-6">
     <section class="section dashboard">
 
-
-        <div class="card">
+        <div class="card" >
 
             <div class="filter">
                 <button type="button" class="btn icon" style="background-color: #1B2137" data-bs-toggle="dropdown">
@@ -27,6 +28,7 @@
 
                 <!-- bar chart -->
                 <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
+               
 
                 <script>
                     var bar_ctx = document.getElementById('barChart').getContext('2d');
@@ -57,26 +59,35 @@
 
                     var xbarValues = [22, 33, 44, 55, 66, 77]; // New x-axis values
                     var yValues = [55, 49, 44, 24, 15, 30, 40];
-                    var barColors = [background_1, background_2, background_3, background_4, background_5, background_6];
+                    var barColors = [background_1, background_2, background_3, background_4, background_5,
+                    background_6]; // Set white color for xbarValues
                     var yaxisLabels = ['Deal Done', 'Pending', 'Interested', 'Technical Call', 'Not Interested', 'Fake', 'NPC'];
 
                     new Chart("barChart", {
                         type: "bar",
                         data: {
-                            labels: xbarValues.map(String), // Convert xbarValues to strings for display
+                            labels: xbarValues.map(String),
                             datasets: [{
                                 backgroundColor: barColors,
-                                data: yValues
+                                data: yValues,
+                                barPercentage: 0.6, // Adjust the column width percentage
                             }]
                         },
                         options: {
                             scales: {
                                 yAxes: [{
                                     ticks: {
+                                        fontColor: '#FFFFFF', // Change y-axis labels color to white
                                         callback: function(value, index, values) {
                                             // Customize the y-axis labels here
                                             return yaxisLabels[index];
                                         }
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        fontColor: '#FFFFFF',
+                                        // Change x-axis labels color to white
                                     }
                                 }]
                             },
@@ -85,16 +96,16 @@
                             },
                             title: {
                                 display: true,
-                                text: "World Wine Production 2018"
+                                // text: "World Wine Production 2018"
                             }
                         }
                     });
                 </script>
-
+               
                 <!-- ... Remaining HTML code ... -->
 
             </div>
-
+            <script src="path-to/node_modules/chart.js/dist/Chart.min.js"></script>
 
         </div>
     </section>

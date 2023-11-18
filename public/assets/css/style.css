@@ -3241,18 +3241,17 @@ padding: 20px;
 #add-icon{
   font-size: 25px;
   display: flex;
-  padding-left: 510px;
+  padding-left: 650px;
   color: black;
   margin: 10px;
 }
 .small-text{
-  font-size: 16px;
+  font-size: 17px;
   padding: 0px 389px 0px;
   margin-top: -34px;
-  margin-left: 159px;
+  margin-left: 300px;
   text-align: none;
   color: black;
-  font-weight: bold;
   text-decoration: none;
 }
 
@@ -3263,6 +3262,59 @@ padding: 20px;
     color: black
 }
 
+.upload-file-add{
+  margin-left: 500px;
+  margin-top: 13px;
+  color: black;
+  flex-direction: row;
+  display: flex;
+
+}
+
+.download-icon{
+  width: 30px;
+  margin-left: 68px;
+  cursor: pointer;
+}
+.hover-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.hover-text {
+  visibility: hidden;
+  cursor: pointer;
+  width: 160px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.hover-container:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+#import-btn{
+  background-color: #e12727;
+  padding: 5px 12px;
+  color: white;
+  border: 2px solid skyblue;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px;
+}
 input[type=file] {
   display: block;
   color: black;

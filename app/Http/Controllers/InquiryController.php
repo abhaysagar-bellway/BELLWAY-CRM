@@ -3,10 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\Validator;
 use App\Models\inquiry;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
+use PhpOffice\PhpSpreadsheet\IOFactory;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Models\YourModel;
+use App\Imports\YourImportClass; 
+use Illuminate\Validation\ValidationException;
 
 class InquiryController extends Controller
 {
@@ -16,9 +24,46 @@ class InquiryController extends Controller
         return view('admin.Searchinquiry',array('user' => $user,'assigningData' => $assigningData));
     }
     public function searchInquiryData(Request $request){
-        // dd($request->all());
+        $query = $request->input('start_date'); 
+
+        $results = YourModel::where('column_name', 'like', '%' . $query . '%')->get();
+        // Replace 'column_name' with the actual column in your table you want to search
+
+        return view('search_results', ['results' => $results]);
+    }
+    
+    public function downloadSampleFile()
+    {
+       
+        $filePath = public_path('sample-file/sample-file.xlsx');
+
+          // Check if the file exists
+    if (!file_exists($filePath)) {
+        return "The file does not exist at the specified location.";
     }
 
+    // Load the Excel file
+    $spreadsheet = IOFactory::load($filePath);
+
+    // Set headers for the response
+    $headers = [
+        'Content-Type' => 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'Content-Disposition' => 'attachment; filename="sample-file.xlsx"',
+    ];
+
+    // Output the file to the browser for download
+    ob_end_clean(); // Clean output buffer
+    return response()->streamDownload(
+        function () use ($spreadsheet) {
+            $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+            $writer->save('php://output');
+        },
+        'sample-file.xlsx',
+        $headers
+    );
+       
+       
+    }
     public function Addinquiry(){
         $inquiryData = Inquiry::all();
        return view('admin.Addinquiry',array('inquiryData'=>$inquiryData));
@@ -26,20 +71,18 @@ class InquiryController extends Controller
 
     public function saveInquiryData(Request $request)
     {       
-      
 
-        
         $validatedData = $request->validate([
             
             'company_name' => 'required|regex:/^[A-Za-z\s]+$/',
             'city' => 'required|regex:/^[A-Za-z\s]+$/',
             'contact_number' => 'required|regex:/^\d+$/',
             'domain' => 'required|regex:/^[A-Za-z\s]+$/',
-            'email' => 'required|email', // Use Laravel's built-in email validation
+            'email' => 'required|email', 
             'sector' => 'required|regex:/^[A-Za-z\s]+$/',
             'alternativenumber' =>'required|regex:/^\d+$/',
             'enquirydate' => 'required',
-            'alternativeemail' => 'required|email', // Use Laravel's built-in email validation
+            'alternativeemail' => 'required|email', 
             'publicity_medium' => 'required|regex:/^[A-Za-z\s]+$/',
             'address' => 'required',
             'customer_answere' => 'required',
@@ -71,9 +114,116 @@ class InquiryController extends Controller
     public function Newinquiry(){
         return view('admin.Newinquiry');
     }
-   
-   
-  
 
+    
+    public function upload(Request $request)
+    {
+        if ($request->hasFile('excel_file')) {
+            $file = $request->file('excel_file');
+            $filePath = $file->storeAs('uploads', $file->getClientOriginalName());
+    
+            // Import data from Excel to database
+            $data = Excel::toCollection(new YourImportClass(), $file);
+    
+            $errorMessages = [];
+            $success = true;
+    
+            foreach ($data[0] as $rowIndex => $row) {
+                // Validate required fields and handle errors
+                if (!$this->validateRequiredFields($row)) {
+                    // $errorMessages[] = "Row {$rowIndex}: Required fields are missing.";
+                    $errorMessages[] = "";
+                    
+                    $success = false;
+                    continue;
+                }
+    
+                // Validate and format date if exists
+                if ($row[7] !== null) {
+                    $enquiryDate = $this->parseDate($row[7]);
 
+                    if ($enquiryDate === null) {
+                        $errorMessages[] = "";
+                        $success = false;
+                        continue;
+                    }
+                    $formattedDate = $enquiryDate->format('Y-m-d');
+                } else {
+                    $formattedDate = null;
+                }
+    
+                // Save to the database
+                try {
+                    Inquiry::create([
+                        // Adjust these fields based on your actual column mappings
+                        'company_name' => $row[0],
+                        'city' => $row[1],
+                        'contact_number' => $row[2],
+                        'domain' => $row[3],
+                        'email' => $row[4],
+                        'sector' => $row[5],
+                        'alternativenumber' => $row[6],
+                        'enquirydate' => $formattedDate,
+                        'alternativeemail' => $row[8],
+                        'publicity_medium' => $row[9],
+                        'address' => $row[10],
+                        'customer_answere' => $row[11],
+                        'state' => $row[12],
+                        'remarks' => $row[13],
+                    ]);
+                } catch (\Exception $e) {
+                    $errorMessages[] = "Row {$rowIndex}: Error saving data to the database.";
+                    $success = false;
+                }
+            }
+    
+            if (!$success) {
+                $errorMessage = implode('', $errorMessages);
+                return redirect()->back()->with('error', $errorMessage);
+            }
+    
+            return redirect()->back()->with('status', 'File uploaded and data stored.');
+        }
+    
+        return redirect()->back()->with('error', 'No file was uploaded.');
+    }
+    
+    private function validateRequiredFields($row)
+{
+    // Define required fields based on your actual data structure
+    $requiredColumns = [0, 1, 7]; // Assuming columns 0, 1, and 7 are required; adjust as needed
+
+    foreach ($requiredColumns as $column) {
+        if (empty($row[$column])) {
+            return false; // Return false immediately if any required field is empty
+        }
+    }
+
+    return true; // Return true if all required fields are present
+}
+    
+    private function parseDate($dateString)
+    {
+        try {
+            // Attempt to parse the date string with different formats
+            $formatsToTry = ['d-m-Y', 'Y-m-d', 'Y/m/d', 'd/m/Y', 'm/d/Y', 'Y-m-d H:i:s']; // Add more formats if needed
+    
+            foreach ($formatsToTry as $format) {
+                $date = Carbon::createFromFormat($format, $dateString);
+                if ($date !== false) {
+                    return $date;
+                }
+            }
+    
+            // If none of the formats matched, return null or handle accordingly
+            return null;
+        } catch (\Exception $e) {
+            // Log the error for debugging purposes
+            error_log("Error parsing date: {$dateString}. Error: {$e->getMessage()}");
+    
+            // Return null or handle the error as needed
+            return null;
+        }
+    }
+    
 }
