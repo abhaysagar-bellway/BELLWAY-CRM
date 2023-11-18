@@ -44,7 +44,9 @@ Route::middleware(['web',CheckAuth::class])->group(function () {
 
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 Route::get('/search-inquiry',[InquiryController::class,'Searchinquiry']);
-Route::post('/search-inquiry-data',[InquiryController::class,'searchInquiryData'])->name('inquiry.search');
+Route::get('/search',[InquiryController::class,'searchInquiryData'])->name('search');
+Route::get('/download-sample-file', [InquiryController::class,'downloadSampleFile'])->name('download.sample');
+Route::post('/upload', [InquiryController::class,'upload'])->name('upload');
 Route::get('/Addinquiry',[InquiryController::class,'Addinquiry']);
 Route::post('/Addinquiry',[InquiryController::class,'saveInquiryData']);
 Route::get('/Newinquiry',[InquiryController::class,'Newinquiry']);

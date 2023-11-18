@@ -25,5 +25,6 @@ class Inquiry extends Model
     'state',
     'remarks',
   ];
-    
+
+ 
 }

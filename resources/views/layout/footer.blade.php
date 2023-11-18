@@ -9,6 +9,26 @@
 
 <script src="{{ asset('js/main.js') }}"></script>
 <script>
+  // Function to get current date in format "DD MMM YYYY"
+  function getCurrentDate() {
+      var months = [
+          "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+      ];
+      var currentDate = new Date();
+      var day = currentDate.getDate();
+      var monthIndex = currentDate.getMonth();
+      var year = currentDate.getFullYear();
+
+      return ('0' + day).slice(-2) + ' ' + months[monthIndex] + ' ' + year;
+  }
+
+  // Set current date as the default value
+  window.onload = function() {
+      document.getElementById('dateField').value = getCurrentDate();
+  };
+</script>
+<script>
   // alert message show using settimeout function
 //   document.getElementById('success') ="<div class='alert alert-success success' id='success' role='alert'> {{ session('status') }}</div>"; 
 // setTimeout(function() {document.getElementById('success');},5000);

@@ -19,11 +19,11 @@
                 <p class="small-text">Add</p>
             </a>
         </div>
-        <div class="upload-file">
+        {{-- <div class="upload-file">
             <div class="mb-3">
                 <input class="form-control-sm" id="formFileSm" type="file">
             </div>
-        </div>
+        </div> --}}
     </div>
 
     <div class="enquiry-container">
@@ -37,7 +37,7 @@
                         <div class="inquiry-label">
                             <img id="dateIcon" src="assets/img/date-logo.png" alt="" class="form-icon">
                         </div>
-                        <input type="text" class="form-control input-box-enquiry rectangle" name="start"
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="start_date"
                             id="datepicker" placeholder="Select a start date : YYYY-MM-DD">
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                         <div class="inquiry-label">
                             <img id="dateIcon" src="assets/img/date-logo.png" alt="" class="form-icon">
                         </div>
-                        <input type="text" class="form-control input-box-enquiry rectangle" name=""
+                        <input type="text" class="form-control input-box-enquiry rectangle" name="end_date"
                             id="datepicker" placeholder="Select a end date : YYYY-MM-DD">
                     </div>
                 </div>
