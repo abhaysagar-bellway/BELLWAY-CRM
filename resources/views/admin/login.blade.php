@@ -75,7 +75,7 @@
             </div>
         @endif
             <div class="login-form">
-                <form action="{{url('/')}}/login" method="POST">
+                <form action="{{url('/')}}/admin" method="POST">
                     @csrf
                   <div class="form-group input-inline">
                         <label for="email"><img src="assets/img/email-logo.png" alt=""
