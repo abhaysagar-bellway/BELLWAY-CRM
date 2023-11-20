@@ -199,7 +199,7 @@
                             <td>{{  $User ->mobile_number }}</td>
                             <td>{{  $User ->email }}</td>
                             <td>
-                                <img src="{{ asset('BELLWAY-CRM/public/uploads') . '/' .  $User ->profile_photo_path}}" width="50px"
+                                <img src="{{ asset('/public/uploads') . '/' .  $User ->profile_photo_path}}" width="50px"
                                     height="50px" alt="image">
                             </td>
                         </tr>
