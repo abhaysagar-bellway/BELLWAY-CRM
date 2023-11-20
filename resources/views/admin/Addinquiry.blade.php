@@ -18,7 +18,7 @@
         <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="upload-file-add">
-                <div class="mb-3">
+                <div class="mb-3" id="input-import-btn">
                     <input class="form-control-sm" id="formFileSm" type="file" name="excel_file">
                     <button type="submit" id="import-btn">Import</button>
                 </div>
@@ -32,8 +32,6 @@
                 </a>
             </div>
         </label>
-        
-        
     </div>
 </div>
 @if (session('status'))

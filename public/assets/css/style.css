@@ -3315,6 +3315,14 @@ padding: 20px;
   cursor: pointer;
   box-shadow: 2px 2px;
 }
+
+#input-import-btn
+{
+  display: flex;
+    text-align: center;
+    margin-right: -50px;
+    padding: 0px 11px 0px 3px;
+}
 input[type=file] {
   display: block;
   color: black;
@@ -3395,6 +3403,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 }
 .dropdown-hover:hover{
   color: black;
+  display: block;
 }
 .message-received-container{
   display: flex;

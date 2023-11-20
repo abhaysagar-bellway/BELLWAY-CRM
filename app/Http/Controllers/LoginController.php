@@ -38,6 +38,9 @@ class LoginController extends Controller
           
 
             if (Auth::attempt($credentials)) {
+
+               
+
                 return redirect()->intended('dashboard')
                             ->withSuccess('Signed in');
 
@@ -87,14 +90,22 @@ class LoginController extends Controller
                 'password' => 'required|regex:/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$/' 
             ]
             );
+
             $credentials = Auth::attempt(['email' =>  $validation[$request->email], 'password' =>  $validation[$request->password]]);
            
             if($credentials){
                 $credentials = $request->only('email', 'password');
-            if (Auth::attempt($credentials)) {
-                return redirect()->intended('dashboard')
-                            ->withSuccess('Signed in');
-
+                if (Auth::attempt($credentials)) {
+                    $user = Auth::user();
+                    // Check if user is an admin
+                    // if ($request->email = 'admin@admin.com') {
+                    //     Auth::logout(); // Log out admin
+                    //     return redirect()->route('admin.login')->with('error', 'Admins should not log in here.');
+                    // }
+            
+                    // Redirect to dashboard for employees
+                    return redirect()->intended('dashboard')->withSuccess('Signed in');
+                
                             //set cookies click on remember
                             if(isset($cookieData['checkbox']) && !empty($cookieData['checkbox'])){
                                 setcookie("email",$cookieData['email'],time()+3600);
