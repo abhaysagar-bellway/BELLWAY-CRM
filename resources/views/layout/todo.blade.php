@@ -16,7 +16,7 @@
       <div class="card-body pb-0">
         <h5 class="card-title">To do</h5>
 
-        <div id="" style="min-height: 250px;" class="echart">
+        <div id="" style=" min-height: 280px" class="echart">
           <ul class="todo-list"> 
             @foreach ($todo as $todos) 
                 <li>{{ $todos->todo }}</li> 

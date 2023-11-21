@@ -79,7 +79,7 @@ $displayPageName = 'none';
 @endphp
 @endif
       <div class="header-username {{$chatNavbarHeading}}" style="display: {{$displayUsername}}">
-        <h1 style="font-size: 16px; font-weight: 600">Hey Maaz</h1>
+        <h1 style="font-size: 16px; font-weight: 600">Hey {{  auth()->user()->first_name . " " . auth()->user()->last_name }}</h1>
         <p>Here is your sales forecast dashboard </p>
       </div>
       <div class="header-pagename" style="display: {{$displayPageName}}">

@@ -56,7 +56,7 @@ $sidebarSearch = '#191F33';
          <a class="nav-link collapsed" data-bs-target="#components-chat" data-bs-toggle="collapse" href="#">
             <h1 class="sidebar-chat-heading">chat</h1><i class="bi bi-chevron-down ms-auto"></i>
          </a>
-         <ul id="components-chat" class="nav-content-chat-list collapse dropdown-chat-scroll" data-bs-parent="#sidebar-chat">
+         {{-- <ul id="components-chat" class="nav-content-chat-list collapse dropdown-chat-scroll" data-bs-parent="#sidebar-chat">
           @foreach ($employeeData as $employe)
           <li>
              <a href="components-alerts.html">
@@ -84,7 +84,7 @@ $sidebarSearch = '#191F33';
            @endforeach
   
         
-         </ul>
+         </ul> --}}
        </li><!-- End Components Nav -->
    
       
