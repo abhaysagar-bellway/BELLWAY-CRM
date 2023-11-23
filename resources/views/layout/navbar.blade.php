@@ -216,7 +216,7 @@ $displayPageName = 'none';
                     </a>
                   </li>
                 
-           
+          
       
                   <li class="status-item">
                     <a href="#">
@@ -254,7 +254,8 @@ $displayPageName = 'none';
               <li class="nav-item dropdown pe-3">
       
                 <a class="nav-link nav-icon nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                  <img src="{{ asset('BELLWAY-CRM/public/uploads') . '/' .$user->profile_photo_path }}" alt="Profile" class="rounded-circle nav-icon">
+                 
+                  <img src="{{ asset('BELLWAY-CRM/public/uploads') . '/' .( auth()->user()->profile_photo_path) }}" alt="Profile" class="rounded-circle nav-icon">
                   <i class="bi bi-caret-down-fill online-dropdown-icon" style="color: {{$dropdownIconColor}}; margin-left: 20px"></i>
                 </a><!-- End Profile Iamge Icon -->
       

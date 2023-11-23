@@ -11,6 +11,7 @@ class RoleController extends Controller
 {
 
     public function role(){
+        $user = User::find(1);
         $role = Role::where('id', '!=', 1)->get();
         $userData =  User::where('role_id', '!=', 1)->get(); 
         $data = DB::table('users')
@@ -18,7 +19,7 @@ class RoleController extends Controller
         ->select('users.first_name','users.last_name', 'roles.rolename', 'roles.role_permission','roles.id')
         ->get();
 
-        return view('admin.role',array('role' => $role, 'data' => $data));
+        return view('admin.role',array('role' => $role, 'data' => $data))->with('user', $user);
     }
 
     public function addrole(Request $request)
