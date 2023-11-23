@@ -322,34 +322,6 @@
 
 //logout function admin 
 
-// function logout() {
-//   swal({
-//     title: 'Do you want to logout?',
-//     showDenyButton: true,
-//     showCancelButton: true,
-//     confirmButtonColor: '#FC6A57',
-//     cancelButtonColor: '#363636',
-//     confirmButtonText: `Yes`,
-//     denyButtonText: `Don't Logout`,
-//   }).then((results) => {
-//     if (results.value) {  
-//         $.ajax({
-//           type: 'POST',
-//           url: baseUrl + "logout",
-//           dataType: 'JSON',
-//           success: function() {
-//             swal("Logged Out", "You have been logged out.", "success").then(() => {
-//               window.location.href = "/logout";
-//             });
-//           }
-//         });
-//       }
-//     // } 
-//     else {
-//       swal("Cancelled", "You are not logged out!", "error");
-//     }
-//   });
-// }
 
 document.addEventListener('DOMContentLoaded', function() {
   // Find the logout button

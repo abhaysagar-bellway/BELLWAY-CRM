@@ -3395,7 +3395,14 @@ table.dataTable thead .sorting_desc_disabled:before {
   font-weight: bold;
 }
 
-
+.editprofile{
+  margin-left: 600px;
+  padding: 14px 12px;
+  color: black;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 .form-role{
   color: whitesmoke;
@@ -3443,3 +3450,4 @@ table.dataTable thead .sorting_desc_disabled:before {
   text-align: center;
   margin-left: 468px;
 }
+

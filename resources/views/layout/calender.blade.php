@@ -19,40 +19,5 @@
                 </div>
             </div>
         </div>
-
-<script>
-  function formatDate(date) {
-    const day = date.getDate();
-    let suffix = '';
-    
-    // Add the appropriate suffix (e.g., "th", "st", "nd", "rd")
-    if (day === 1 || day === 21 || day === 31) {
-        suffix = 'st';
-    } else if (day === 2 || day === 22) {
-        suffix = 'nd';
-    } else if (day === 3 || day === 23) {
-        suffix = 'rd';
-    } else {
-        suffix = 'th';
-    }
-
-    const month = date.toLocaleString('default', { month: 'short' });
-    const year = date.getFullYear();
-
-    return `${day}${suffix} ${month}, ${year}`;
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const dateField = document.getElementById('dateField');
-    const currentDate = new Date();
-    const formattedDate = formatDate(currentDate);
-    dateField.textContent = formattedDate;
-});
-
-</script>
-
-
-
-
-
+@include('layout.footer')
 </div>

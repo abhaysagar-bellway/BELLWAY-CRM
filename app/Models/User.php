@@ -33,9 +33,13 @@ class User extends Authenticatable
         'mobile_number',
         'email',
         'password',
+        'date_of_birth',
+        'gender',
+        'address',
         'profile_photo_path',       
     ];
 
+ 
     /**
      * The attributes that should be hidden for serialization.
      *

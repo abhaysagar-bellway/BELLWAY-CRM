@@ -147,6 +147,59 @@
                         </span>
                     </div>
                 </div>
+
+                <div class="form-group col-md-6">
+                    <label for="date" class="row-text">Date of Birth</label>
+                    <div class="input-inline-inquiry"><label for="date" class="inquiry-lable"><img
+                                src="assets/img/birth.png" alt="" class="form-icon"></label>
+                        <input type="date" class="form-control input-box-enquiry rectangle" name="date_of_birth"
+                        id="datepicker" aria-describedby="" placeholder="Enter the date of birth">
+                    </div>
+                <div class="input-inline">
+                        <span class="text-danger">
+                            @error('date_of_birth')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="form-group col-md-6">
+                    <label for="gender" class="row-text">Gender</label>
+                    <div class="input-inline-inquiry"><label for="role" class="inquiry-lable"><img
+                                src="assets/img/gender.png" alt="image" class="form-icon"></label>
+                                <select class="form-control input-box-enquiry rectangle" name="gender" aria-label="Default select example">
+                                    <option selected>choose option</option> 
+                                      <option value="Male">Male</option>
+                                      <option value="Female">Female</option>
+                                      <option value="Other">Other</option>       
+                                  </select> 
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('gender')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                </div>    
+                
+                <div class="form-group col-md-6">
+                    <label for="address" class="row-text">Address</label>
+                    <div class="input-inline-inquiry"><label for="address" class="inquiry-lable"><img
+                                src="assets/img/address.png" alt="" class="form-icon"></label>
+                        <input type="address" class="form-control input-box-enquiry rectangle" name="address"
+                            id="" aria-describedby="" placeholder="Address">
+                    </div>
+                    <div class="input-inline">
+                        <span class="text-danger">
+                            @error('address')
+                                {{ $message }}
+                            @enderror
+                        </span>
+                    </div>
+                </div>
+
                 <div class="form-group col-md-6">
                     <label for="" class="row-text">Upload Image</label>
                     <div class="input-inline-inquiry">
@@ -186,6 +239,9 @@
                         <th scope="col">Role</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
+                        <th scope="col">DateOfBirth</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Address</th>
                         <th scope="col">Profile</th>
                     </tr>
                 </thead>
@@ -198,6 +254,9 @@
                             <td>{{  $User ->role_id }}</td>
                             <td>{{  $User ->mobile_number }}</td>
                             <td>{{  $User ->email }}</td>
+                            <td>{{  $User ->date_of_birth }}</td>
+                            <td>{{  $User ->gender }}</td>
+                            <td>{{  $User ->address }}</td>
                             <td>
                                 <img src="{{ asset('BELLWAY-CRM/public/uploads') . '/' .  $User ->profile_photo_path}}" width="50px"
                                     height="50px" alt="image">

@@ -75,7 +75,7 @@ $("document").ready( function (){
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
         flatpickr('#datepicker', {
-            dateFormat: 'Y-m-d',
+            dateFormat: 'd-M-Y',
             allowInput: true,
         });
     </script>

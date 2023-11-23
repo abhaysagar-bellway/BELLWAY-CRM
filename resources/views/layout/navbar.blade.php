@@ -21,11 +21,34 @@ $dashboardOnlineIcon = 'chat-online-icon';
 @endphp
 @endif
 
+@if(Request::is('profile'))
+@php
+$navbarBackground = '#1B2137';
+$navbarInputBackground = '#FFFFFF1F';
+$chatNavbarHeading = 'chat-navbar-heading';
+$displayPageName = 'block';
+$pagename = 'My Profile';
+$dropdownIconColor = "#E8F5FC";
+$dashboardBellIcon = 'chat-bell-icon';
+$dashboardOnlineIcon = 'chat-online-icon';
+@endphp
+@endif
+@if(Request::is('editprofile'))
+@php
+$navbarBackground = '#1B2137';
+$navbarInputBackground = '#FFFFFF1F';
+$chatNavbarHeading = 'chat-navbar-heading';
+$displayPageName = 'block';
+$pagename = 'Edit Profile';
+$dropdownIconColor = "#E8F5FC";
+$dashboardBellIcon = 'chat-bell-icon';
+$dashboardOnlineIcon = 'chat-online-icon';
+@endphp
+@endif
 
 
 
-
-@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting')||Request::is('profile')||Request::is('edit'))
+@if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('setting'))
 @php
 $navbarBackground = '#1B2137';
 $navbarInputBackground = '#FFFFFF1F';
@@ -80,7 +103,7 @@ $displayPageName = 'none';
 @endif
       <div class="header-username {{$chatNavbarHeading}}" style="display: {{$displayUsername}}">
         <h1 style="font-size: 16px; font-weight: 600">Hey {{  auth()->user()->first_name . " " . auth()->user()->last_name }}</h1>
-        <p>Here is your sales forecast dashboard </p>
+        <p>Welcome to Dashboard</p>
       </div>
       <div class="header-pagename" style="display: {{$displayPageName}}">
         <h1 style="font-size: 36px; font-weight: 600">{{$pagename}}</h1>
@@ -248,7 +271,7 @@ $displayPageName = 'none';
                   </li>
       
                   <li>
-                    <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                    <a class="dropdown-item d-flex align-items-center" href="{{ route('profile.edit') }}">
                       <i class="bi bi-person-gear profile-dropdown-icon"></i>
                       <span>Edit Profile</span>
                     </a>
