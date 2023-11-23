@@ -38,7 +38,7 @@ $sidebarHeading = '#3DFFC1';
           $navlink = 'nav-link';
           $navLinkColor = '';
        @endphp
-     @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role')||Request::is('profile')||Request::is('edit'))
+     @if(Request::is('search-inquiry')||Request::is('Addinquiry')||Request::is('Newinquiry')||Request::is('ClientDetail')||Request::is('proposaldetails')||Request::is('pendingFollowup')||Request::is('doneFollowup')||Request::is('lead')||Request::is('chat')||Request::is('setting')||Request::is('createuser')||Request::is('role')||Request::is('profile')||Request::is('editprofile'))
         @php
           $dashboardColorClass = '';
           $navLinkColor = '#444444';

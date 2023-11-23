@@ -23,7 +23,7 @@ class createUserController extends Controller
        
       $validatedData = $request->validate([
             'first_name' => 'required|min:3|max:20',
-            'last_name' => 'required|min:3|max:20|unique:users',
+            'last_name' => 'required|min:3|max:20',
             'role_id' => 'required',
             'mobile_number' => 'required|regex:/^(\+\d{1,3}[- ]?)?\d{10}$/',
             'email' =>'required|regex:/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,8}$/ix',

@@ -31,7 +31,7 @@ class ProfileController extends Controller
             'date_of_birth' => 'required',
             'gender' => 'required',
             'address' => 'required',
-            'profile_photo_path' => 'required|mimes:png,jpg,jpeg|max:2048',
+            'profile_photo_path' => '',
             
         ]);
         $input = $request->all();
