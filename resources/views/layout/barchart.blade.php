@@ -3,7 +3,7 @@
 <div class="col-6">
     <section class="section dashboard">
 
-        <div class="card" >
+        <div class="card">
 
             <div class="filter">
                 <button type="button" class="btn icon" style="background-color: #1B2137" data-bs-toggle="dropdown">
@@ -24,13 +24,15 @@
                 <h5 class="card-title">299</h5>
                 <h5 class="card-heading">Total Follow up</h5>
 
-                <!-- ... Previous HTML code ... -->
+                <!-- ... Previous HTML code in chart graph ... -->
 
                 <!-- bar chart -->
-                <canvas id="barChart" style="width:100%;max-width:600px"></canvas>
-               
-
-                <script>
+                {{-- <canvas id="barChart"
+                    style="    width: 250px;
+                max-width: 601px;
+                display: block;
+                height: 180px;"></canvas> --}}
+                {{-- <script>
                     var bar_ctx = document.getElementById('barChart').getContext('2d');
 
                     var background_1 = bar_ctx.createLinearGradient(0, 0, 0, 600);
@@ -100,13 +102,129 @@
                             }
                         }
                     });
+                </script> --}}
+                {{-- <script>
+                    var bar_ctx = document.getElementById('barChart').getContext('2d');
+                    var xbarValues = [22, 33, 44, 55, 77, 80, 65]; // New x-axis values
+                    var yValues = [55, 49, 44, 24, 30, 57, 54];
+                    var yaxisLabels = ['DealDone', 'Pending', 'Interested', 'TechnicalCall', 'NotInterested', 'Fake', 'NPC'];
+                    new Chart("barChart", {
+                        type: "bar",
+                        data: {
+                            labels: xbarValues.map(String),
+                            datasets: [{
+                                backgroundColor: [
+                                    'rgba(155, 131, 184, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 206, 86, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)',
+                                    'rgba(255, 159, 64, 0.8)',
+                                    'rgba(255, 159, 64, 0.8)'
+                                ],
+                                data: yValues,
+                                barPercentage: 0.6, // Adjust the column width percentage
+                                borderWidth: 1,
+                                
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                
+                                yAxes: [{
+                                    ticks: {
+                                        fontColor: '#FFFFFF', // Change y-axis labels color to white
+                                        callback: function(value, index, values) {
+                                            // Customize the y-axis labels here
+                                            return yaxisLabels[index];
+                                        }
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        fontColor: '#FFFFFF',
+                                        // Change x-axis labels color to white
+                                    }
+                                }]
+                            },
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                // text: "World Wine Production 2018"
+                            }
+                        }
+                    });
+                </script> --}}
+                 <!-- ... Previous HTML code ... -->
+ 
+                <canvas id="barChart" style="width: 250px; max-width: 601px; display: block; height: 180px;"></canvas>
+
+                <script>
+                    var bar_ctx = document.getElementById('barChart').getContext('2d');
+                    var xbarValues = [22, 33, 44, 55, 77, 80, 65]; // New x-axis values
+                    var yValues = [55, 49, 44, 24, 30, 57, 54];
+                    var yaxisLabels = ['DealDone', 'Pending', 'Interested', 'TechnicalCall', 'NotInterested', 'Fake', 'NPC'];
+
+                    new Chart("barChart", {
+                        type: "bar",
+                        data: {
+                            labels: xbarValues.map(String),
+                            datasets: [{
+                                backgroundColor: [
+                                    'rgba(155, 131, 184, 0.8)',
+                                    'rgba(54, 162, 235, 0.8)',
+                                    'rgba(255, 206, 86, 0.8)',
+                                    'rgba(75, 192, 192, 0.8)',
+                                    'rgba(153, 102, 255, 0.8)',
+                                    'rgba(255, 159, 64, 0.8)',
+                                    'rgba(255, 159, 64, 0.8)'
+                                ],
+                                data: yValues,
+                                barPercentage: 0.6,
+                                borderWidth: 1,
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        fontColor: '#FFFFFF',
+                                        beginAtZero: true, // Start y-axis at zero
+                                        callback: function(value, index, values) {
+                                            return yaxisLabels[index];
+                                        }
+                                    },
+                                    gridLines: {
+                                        color: 'rgba(255, 255, 255, 0.2)' // Y-axis grid line color
+                                    }
+                                }],
+                                xAxes: [{
+                                    ticks: {
+                                        fontColor: '#FFFFFF',
+                                    },
+                                    gridLines: {
+                                        color: 'rgba(255, 255, 255, 0.2)' // X-axis grid line color
+                                    }
+                                }]
+                            },
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                // text: "World Wine Production 2018"
+                            }
+                        }
+                    });
                 </script>
-               
+
+
                 <!-- ... Remaining HTML code ... -->
 
             </div>
             <script src="path-to/node_modules/chart.js/dist/Chart.min.js"></script>
-
         </div>
     </section>
 </div>

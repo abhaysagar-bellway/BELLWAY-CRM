@@ -72,8 +72,9 @@ Route::post('/todo', [DashboardController::class, 'addTodo']);
 Route::get('/role',[RoleController::class,'role']);
 Route::post('/role',[RoleController::class,'addrole']);
 Route::get('/profile',[ProfileController::class,'profile']);
+Route::get('/editprofile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::put('/updateprofile', [ProfileController::class, 'update'])->name('profile.update');
 Route::get('/logout',[LogoutController::class,'logout'])->name('logout.perform');
-
 
 });
 

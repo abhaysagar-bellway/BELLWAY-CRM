@@ -2857,9 +2857,34 @@ margin-top: 50px;
 }
 .calender{
 display: flex;
-flex-direction: row;
+flex-direction: column;
 justify-content: center;
 align-items: center;
+}
+#calender-img
+{
+  text-align: center;
+  width: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.btn-send-rsvp{
+  background-color: #E8F5FC;
+  padding: 8px 30px;
+  color: black;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 13px;
+}
+
+.date{
+  background-color: #1B2137;
+  color: wheat;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  padding: 12px;
 }
 .sidebar-image{
   display: flex;
@@ -3370,7 +3395,14 @@ table.dataTable thead .sorting_desc_disabled:before {
   font-weight: bold;
 }
 
-
+.editprofile{
+  margin-left: 600px;
+  padding: 14px 12px;
+  color: black;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+}
 
 .form-role{
   color: whitesmoke;
@@ -3392,6 +3424,8 @@ table.dataTable thead .sorting_desc_disabled:before {
 .total-container{
   display: flex;
   flex-direction: row;
+  height: 114px;
+  text-align: center;
 }
 .chat-list-status-icon{
   margin-left: 0px;
@@ -3416,3 +3450,4 @@ table.dataTable thead .sorting_desc_disabled:before {
   text-align: center;
   margin-left: 468px;
 }
+
