@@ -108,7 +108,7 @@
                     </label>
                     <input type="text" class="form-control input-box-enquiry rectangle" name="date_of_birth"
                            value="{{$user->date_of_birth}}" 
-                           placeholder="Date of Birth">
+                           placeholder="Date of Birth" id="datepicker">
                 </div>
                 <div class="input-inline">
                     <span class="text-danger">
@@ -164,7 +164,12 @@
                     <label for="" class="inquiry-lable">
                         <img src="assets/img/city.png" alt="" class="form-icon">
                     </label>
-                    <input type="file" class="form-control input-box-enquiry rectangle" name="profile_photo_path" placeholder="Upload Profile Photo" style="padding: 15px; background-image: linear-gradient(180deg, #3E4768, #1B2137); color: #ffffff !important;">
+                    <input type="file" class="form-control input-box-enquiry rectangle" name="profile_photo_path" placeholder="Upload Profile Photo" style="padding: 15px; background-image: linear-gradient(180deg, #3E4768, #1B2137); color: #ffffff !important;"  >
+                    @php
+                    $preifix  =  (env("APP_ENV") == "local") ? 'BELLWAY-CRM' : '';
+                    @endphp 
+                    <img src="{{ asset($preifix.'/public/uploads') . '/' .  $user->profile_photo_path}}" alt="" class="form-icon" style=" width: 45px; height: 45px;">
+
                 </div>
             
                 <div class="input-inline">

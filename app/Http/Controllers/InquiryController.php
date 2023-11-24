@@ -19,17 +19,23 @@ use Illuminate\Validation\ValidationException;
 class InquiryController extends Controller
 {
     public function Searchinquiry(){
+        $user = User::all(); 
+        $user = Auth::user();
+        $user = User::find(1);
         $user = User::where('role_id', '!=', 1)->get();
         $assigningData = User::where('role_id',1)->get();
-        return view('admin.Searchinquiry',array('user' => $user,'assigningData' => $assigningData));
+        return view('admin.Searchinquiry',array('user' => $user,'assigningData' => $assigningData))->with('user', $user);
     }
     public function searchInquiryData(Request $request){
+        $user = User::all(); 
+        $user = auth()->user();
+        $user = User::find(1);
         $query = $request->input('start_date'); 
 
         $results = YourModel::where('column_name', 'like', '%' . $query . '%')->get();
         // Replace 'column_name' with the actual column in your table you want to search
 
-        return view('search_results', ['results' => $results]);
+        return view('search_results', ['results' => $results],array('user' => $user))->with('user', $user);
     }
     
     public function downloadSampleFile()
@@ -65,13 +71,16 @@ class InquiryController extends Controller
        
     }
     public function Addinquiry(){
+        $user = User::all(); 
+        $user = auth()->user();
+        $user = User::find(1); 
         $inquiryData = Inquiry::all();
-       return view('admin.Addinquiry',array('inquiryData'=>$inquiryData));
+       return view('admin.Addinquiry',array('inquiryData'=>$inquiryData))->with('user', $user);
     }
 
     public function saveInquiryData(Request $request)
     {       
-
+        $user = auth()->user();
         $validatedData = $request->validate([
             
             'company_name' => 'required|regex:/^[A-Za-z\s]+$/',
@@ -112,7 +121,10 @@ class InquiryController extends Controller
     }
 
     public function Newinquiry(){
-        return view('admin.Newinquiry');
+        $user = User::all(); 
+        $user = auth()->user();
+        $user = User::find(1);
+        return view('admin.Newinquiry')->with('user', $user);
     }
 
     

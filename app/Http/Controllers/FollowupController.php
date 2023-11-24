@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class FollowupController extends Controller
 {
+    
     public function pendingFollowup(){
-        return view('admin.PendingFollowup');
+        $user = User::all(); 
+        return view('admin.PendingFollowup')->with('user', $user);
     }
     public function doneFollowup(){
-        return view('admin.DoneFollowup');
+        $user = User::all(); 
+        return view('admin.DoneFollowup')->with('user', $user);
     }
 }

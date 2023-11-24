@@ -1,10 +1,10 @@
 <div class="enquiry-container">
     @include('layout.header')
     @include('layout.sidebar')
-
-    <div class="enquiry-title">
-        <h1>Enquiry</h1>
-    </div>
+    <div class="col-10">
+        @include('layout.navbar')
+        </div>
+   
     <div class="logo-head">
         <div class="inquiry-header">
             <label for="date"class="inquiry-lable"><img src="assets/img/search-enquiry.png" alt=""
@@ -12,7 +12,6 @@
             <h3 id="inquiry-header">Done Follow Up</h3>
         </div>
     </div>
-
     <div class="enquiry-container">
 
         <form action="{{ url('/') }}/doneFollowup" method="POST">
@@ -49,7 +48,7 @@
                     </div>
 
                 </div>
-
+                
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Sector</label>
                     <div class="input-inline-inquiry"><label for="sector" class="inquiry-lable"><img
