@@ -12,7 +12,6 @@
             <h3 id="inquiry-header">Done Follow Up</h3>
         </div>
     </div>
-
     <div class="enquiry-container">
 
         <form action="{{ url('/') }}/doneFollowup" method="POST">
@@ -49,7 +48,7 @@
                     </div>
 
                 </div>
-
+                
                 <div class="form-group col-md-6">
                     <label for="text" class="row-text">Sector</label>
                     <div class="input-inline-inquiry"><label for="sector" class="inquiry-lable"><img

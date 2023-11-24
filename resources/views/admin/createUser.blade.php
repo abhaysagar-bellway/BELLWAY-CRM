@@ -258,8 +258,14 @@
                             <td>{{  $User ->gender }}</td>
                             <td>{{  $User ->address }}</td>
                             <td>
-                                <img src="{{ asset('BELLWAY-CRM/public/uploads') . '/' .  $User ->profile_photo_path}}" width="50px"
+                                @php
+                             $preifix  =  (env("APP_ENV")== "local") ? 'BELLWAY-CRM' : '';
+                             @endphp
+                                     <img src="{{ asset($preifix.'/public/uploads') . '/' .  $User ->profile_photo_path}}" width="50px"
                                     height="50px" alt="image">
+                                
+                               
+
                             </td>
                         </tr>
                     @endforeach

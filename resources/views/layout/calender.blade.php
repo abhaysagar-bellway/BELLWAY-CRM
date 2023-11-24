@@ -9,7 +9,10 @@
             <div class="card-body">
                 <div id="" style="min-height: 233px;" class="calender">
                     <div class="calender">
-                      <img id="calender-img" src="{{ asset('BELLWAY-CRM/public/assets/img/calendar.png') }}" alt="Calender Image">
+                        @php
+                        $preifix  =  (env("APP_ENV")== "local") ? 'BELLWAY-CRM' : '';
+                        @endphp
+                      <img id="calender-img" src="{{ asset($preifix.'/public/assets/img/calendar.png') }}" alt="Calender Image">
                       <em id="dateField" class="date"></em>
                         <button type="button" class="btn btn-send-rsvp" style="background-color: #E8F5FC">
                             Send RSVP
